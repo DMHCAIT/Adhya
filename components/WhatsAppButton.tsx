@@ -27,14 +27,14 @@ export default function WhatsAppButton() {
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="group relative flex items-center justify-center w-16 h-16 bg-gradient-to-br from-[#25D366] to-[#128C7E] rounded-full shadow-2xl hover:shadow-3xl transition-all hover:scale-110"
+          className="group relative flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-[#25D366] to-[#128C7E] rounded-full shadow-2xl hover:shadow-3xl transition-all hover:scale-110"
           aria-label="Chat on WhatsApp"
         >
           {/* Pulse Animation */}
           <span className="absolute inline-flex h-full w-full rounded-full bg-[#25D366] opacity-75 animate-ping"></span>
           
           {/* WhatsApp Icon */}
-          <MessageCircle className="relative w-8 h-8 text-white" />
+          <MessageCircle className="relative w-7 h-7 sm:w-8 sm:h-8 text-white" />
 
           {/* Tooltip */}
           {showTooltip && (
@@ -58,20 +58,6 @@ export default function WhatsAppButton() {
           )}
         </a>
       </motion.div>
-
-      {/* Mobile-optimized smaller button on smaller screens */}
-      <style jsx global>{`
-        @media (max-width: 640px) {
-          .fixed.bottom-6.right-6 a {
-            width: 56px;
-            height: 56px;
-          }
-          .fixed.bottom-6.right-6 svg {
-            width: 28px;
-            height: 28px;
-          }
-        }
-      `}</style>
     </>
   );
 }

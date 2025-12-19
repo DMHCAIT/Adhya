@@ -335,15 +335,15 @@ export default function BookDiscussionPage() {
                     <div className="relative">
                       <Sparkles className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" strokeWidth={1.5} />
                       <select
-                        id="serviceType"
-                        name="serviceType"
-                        value={formData.serviceType}
+                        id="consultationType"
+                        name="consultationType"
+                        value={formData.consultationType}
                         onChange={handleChange}
                         required
                         className="w-full pl-14 pr-6 py-4 border border-gray-300 focus:border-gray-900 focus:outline-none transition-colors font-light text-gray-900 bg-white appearance-none"
                       >
-                        <option value="">Select a service</option>
-                        {serviceTypes.map(service => (
+                        <option value="">Select consultation type</option>
+                        {consultationTypes.map(service => (
                           <option key={service.value} value={service.value}>
                             {service.label} ({service.duration})
                           </option>
@@ -423,15 +423,17 @@ export default function BookDiscussionPage() {
                         Budget Range
                       </label>
                       <select
-                        id="budget"
-                        name="budget"
-                        value={formData.budget}
+                        id="budgetRange"
+                        name="budgetRange"
+                        value={formData.budgetRange}
                         onChange={handleChange}
                         className="w-full px-6 py-4 border border-gray-300 focus:border-gray-900 focus:outline-none transition-colors font-light text-gray-900 bg-white"
                       >
                         <option value="">Select range</option>
                         {budgetRanges.map(range => (
-                          <option key={range} value={range}>{range}</option>
+                          <option key={range.value} value={range.value}>
+                            {range.icon} {range.label}
+                          </option>
                         ))}
                       </select>
                     </div>

@@ -15,13 +15,12 @@ export default function Header() {
 
   const navItems = [
     { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
-    { name: 'Services', path: '/services' },
+    { name: 'Shop by Occasion', path: '/by-occasion' },
     { name: 'Collections', path: '/collections' },
-    { name: 'Design Process', path: '/design-process' },
-    { name: 'Testimonials', path: '/testimonials' },
-    { name: 'FAQ', path: '/faq' },
-    { name: 'Contact', path: '/contact' },
+    { name: 'Design Journey', path: '/design-journey' },
+    { name: 'Our Story', path: '/behind-the-scenes' },
+    { name: 'Client Stories', path: '/client-stories' },
+    { name: 'Style Quiz', path: '/style-quiz' },
   ];
 
   return (

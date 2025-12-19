@@ -811,6 +811,115 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Luxury Features Section */}
+      <section className="section-padding bg-white">
+        <div className="max-w-7xl mx-auto container-padding">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-light mb-6" style={{ fontFamily: 'var(--font-cormorant)', color: '#1C1C1C' }}>
+              Discover Your Perfect Style
+            </h2>
+            <p className="text-lg font-light" style={{ color: '#5E5E5E' }}>
+              Explore our curated experiences designed for you
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+            >
+              <Link href="/by-occasion" className="group block">
+                <div className="relative aspect-[3/4] overflow-hidden mb-4">
+                  <Image src="/Designer Lehengas.png" alt="Shop by Occasion" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                  <div className="absolute bottom-6 left-6 right-6">
+                    <h3 className="text-2xl font-light text-white mb-2" style={{ fontFamily: 'var(--font-cormorant)' }}>Shop by Occasion</h3>
+                    <p className="text-sm text-white/90 font-light">Find outfits for your event</p>
+                  </div>
+                </div>
+              </Link>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+            >
+              <Link href="/style-quiz" className="group block">
+                <div className="relative aspect-[3/4] overflow-hidden mb-4">
+                  <Image src="/Designer Sarees.png" alt="Style Quiz" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                  <div className="absolute bottom-6 left-6 right-6">
+                    <h3 className="text-2xl font-light text-white mb-2" style={{ fontFamily: 'var(--font-cormorant)' }}>Style Quiz</h3>
+                    <p className="text-sm text-white/90 font-light">Discover your aesthetic</p>
+                  </div>
+                </div>
+              </Link>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+            >
+              <Link href="/mother-daughter-showcase" className="group block">
+                <div className="relative aspect-[3/4] overflow-hidden mb-4">
+                  <Image src="/Party & Occasion Wear.png" alt="Mother-Daughter Sets" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                  <div className="absolute bottom-6 left-6 right-6">
+                    <h3 className="text-2xl font-light text-white mb-2" style={{ fontFamily: 'var(--font-cormorant)' }}>Matching Sets</h3>
+                    <p className="text-sm text-white/90 font-light">Mother-daughter combos</p>
+                  </div>
+                </div>
+              </Link>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+            >
+              <Link href="/design-journey" className="group block">
+                <div className="relative aspect-[3/4] overflow-hidden mb-4">
+                  <Image src="/Designer Lehengas.png" alt="Design Journey" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                  <div className="absolute bottom-6 left-6 right-6">
+                    <h3 className="text-2xl font-light text-white mb-2" style={{ fontFamily: 'var(--font-cormorant)' }}>Our Process</h3>
+                    <p className="text-sm text-white/90 font-light">See how we create magic</p>
+                  </div>
+                </div>
+              </Link>
+            </motion.div>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.5 }}
+            className="text-center mt-12"
+          >
+            <Link
+              href="/fabric-stories"
+              className="inline-block px-8 py-4 border-2 hover:bg-[#1C1C1C] hover:text-white transition-all text-sm tracking-wider"
+              style={{ borderColor: '#1C1C1C', color: '#1C1C1C' }}
+            >
+              EXPLORE FABRIC STORIES
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Final CTA - Ultra Luxury */}
       <section className="section-padding relative overflow-hidden" style={{ backgroundColor: '#FAF9F7' }}>
         {/* Decorative Background Elements */}

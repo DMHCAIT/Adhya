@@ -3,19 +3,25 @@ import Link from 'next/link';
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
-  const quickLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
-    { name: 'Services', path: '/services' },
+  const shopLinks = [
+    { name: 'Shop by Occasion', path: '/by-occasion' },
     { name: 'Collections', path: '/collections' },
-    { name: 'Book Discussion', path: '/book-discussion' },
-    { name: 'Contact', path: '/contact' },
+    { name: 'Mother-Daughter Sets', path: '/mother-daughter-showcase' },
+    { name: 'Style Quiz', path: '/style-quiz' },
+  ];
+
+  const aboutLinks = [
+    { name: 'Design Journey', path: '/design-journey' },
+    { name: 'Behind the Scenes', path: '/behind-the-scenes' },
+    { name: 'Fabric Stories', path: '/fabric-stories' },
+    { name: 'Client Stories', path: '/client-stories' },
+    { name: 'Book Consultation', path: '/book-discussion' },
   ];
 
   return (
     <footer className="bg-[#1C1C1C] border-t border-[#C8A96A]/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Brand */}
           <div>
             <h3 className="text-3xl font-light tracking-[0.3em] mb-4 text-[#FAF9F7]" style={{ fontFamily: 'var(--font-cormorant)' }}>
@@ -37,11 +43,27 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Shop Links */}
           <div>
-            <h4 className="text-sm font-medium tracking-widest mb-4 text-[#C8A96A] uppercase">Quick Links</h4>
+            <h4 className="text-sm font-medium tracking-widest mb-4 text-[#C8A96A] uppercase">Shop</h4>
             <div className="flex flex-col space-y-2">
-              {quickLinks.map((link) => (
+              {shopLinks.map((link) => (
+                <Link
+                  key={link.path}
+                  href={link.path}
+                  className="text-sm text-[#E8C2C2] hover:text-[#C8A96A] font-light transition-colors"
+                >
+                  {link.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* About Links */}
+          <div>
+            <h4 className="text-sm font-medium tracking-widest mb-4 text-[#C8A96A] uppercase">Discover</h4>
+            <div className="flex flex-col space-y-2">
+              {aboutLinks.map((link) => (
                 <Link
                   key={link.path}
                   href={link.path}
