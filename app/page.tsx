@@ -5,6 +5,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Sparkles, Award, Heart, Star, ArrowRight, Check, Crown, Gem } from 'lucide-react';
 import { useRef } from 'react';
+import StickyConsultationBar from '@/components/StickyConsultationBar';
+import LiveChat from '@/components/LiveChat';
 
 export default function HomePage() {
   const heroRef = useRef(null);
@@ -84,161 +86,398 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen" style={{ backgroundColor: '#FAF9F7' }}>
-      {/* Hero Section - Ultra Luxurious */}
+      {/* Hero Section - Story First, Product Later */}
       <section ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Animated Background Pattern */}
-        <div className="absolute inset-0 opacity-[0.03]">
-          <div className="absolute inset-0" style={{ 
-            backgroundImage: `repeating-linear-gradient(0deg, transparent, transparent 50px, #C8A96A 50px, #C8A96A 51px)`,
-            transform: 'rotate(45deg) scale(1.5)'
-          }}></div>
-        </div>
-
-        {/* Hero Image Background with Enhanced Overlay */}
+        {/* Emotional Video/Image Background */}
         <motion.div 
           style={{ scale, opacity }}
           className="absolute inset-0"
         >
           <Image
             src="/home page 1.png"
-            alt="ADHYA Designer Studio"
+            alt="Moments of Love"
             fill
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-[#1C1C1C]/85 via-[#1C1C1C]/75 to-black/80"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/60"></div>
         </motion.div>
         
+        {/* Minimalist Poetic Content */}
         <motion.div 
           style={{ y: yPos }}
-          className="max-w-7xl mx-auto container-padding py-40 relative z-10"
+          className="max-w-5xl mx-auto container-padding py-40 relative z-10 text-center"
         >
           <motion.div
             initial={{ opacity: 0, y: 60 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-            className="text-center"
+            transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
           >
-            {/* Decorative Top Element */}
-            <motion.div 
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
-              className="flex items-center justify-center mb-12"
-            >
-              <div className="flex items-center gap-6">
-                <motion.div 
-                  animate={{ width: ["0%", "100%"] }}
-                  transition={{ duration: 1.2, delay: 0.5 }}
-                  className="h-px bg-gradient-to-r from-transparent via-[#C8A96A] to-[#C8A96A]" 
-                  style={{ width: '80px' }}
-                />
-                <Crown className="w-8 h-8 text-[#C8A96A]" strokeWidth={1} />
-                <motion.div 
-                  animate={{ width: ["0%", "100%"] }}
-                  transition={{ duration: 1.2, delay: 0.5 }}
-                  className="h-px bg-gradient-to-l from-transparent via-[#C8A96A] to-[#C8A96A]" 
-                  style={{ width: '80px' }}
-                />
-              </div>
-            </motion.div>
-            
-            {/* Main Heading - Enhanced Typography */}
+            {/* Poetic Line - The ONLY text */}
             <motion.h1 
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.6 }}
-              className="text-7xl md:text-8xl lg:text-9xl font-light text-white mb-6 tracking-tight leading-none" 
+              transition={{ duration: 1.2, delay: 0.6 }}
+              className="text-5xl md:text-6xl lg:text-7xl font-light text-white mb-20 leading-relaxed" 
               style={{ 
                 fontFamily: 'var(--font-cormorant)',
-                textShadow: '0 4px 20px rgba(0,0,0,0.5)'
+                textShadow: '0 4px 30px rgba(0,0,0,0.7)',
+                letterSpacing: '0.02em'
               }}
             >
-              ADHYA
+              Designed with love.<br />
+              Crafted for moments.
             </motion.h1>
             
-            {/* Subtitle with Luxury Accent */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.8 }}
-              className="mb-8"
-            >
-              <p className="text-2xl md:text-3xl font-light tracking-[0.4em] uppercase mb-2" style={{ color: '#C8A96A' }}>
-                Designer Studio
-              </p>
-              <div className="flex items-center justify-center gap-3">
-                <div className="w-2 h-2 rotate-45 border border-[#C8A96A]"></div>
-                <p className="text-sm tracking-[0.3em] uppercase text-gray-400 font-light">
-                  Couture Atelier
-                </p>
-                <div className="w-2 h-2 rotate-45 border border-[#C8A96A]"></div>
-              </div>
-            </motion.div>
-            
-            {/* Decorative Line */}
-            <motion.div
-              initial={{ width: 0 }}
-              animate={{ width: "8rem" }}
-              transition={{ duration: 1, delay: 1 }}
-              className="h-px bg-gradient-to-r from-transparent via-[#C8A96A] to-transparent mx-auto mb-12"
-            />
-            
-            {/* Description - Enhanced Typography */}
+            {/* Single Elegant CTA */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 1.2 }}
-              className="mb-16"
-            >
-              <p className="text-xl md:text-2xl font-light text-white max-w-4xl mx-auto leading-relaxed mb-4" style={{ fontFamily: 'var(--font-cormorant)' }}>
-                Where Tradition Meets Contemporary Luxury
-              </p>
-              <p className="text-base md:text-lg font-light text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                Exquisite bespoke couture for women and children, handcrafted with unparalleled artistry
-              </p>
-            </motion.div>
-            
-            {/* CTA Buttons - Luxury Design */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 1.4 }}
-              className="flex flex-col sm:flex-row gap-6 justify-center items-center"
             >
               <Link
-                href="/collections"
-                className="group relative px-16 py-6 overflow-hidden text-sm font-light tracking-[0.3em] uppercase transition-all duration-700"
-                style={{ backgroundColor: '#C8A96A' }}
+                href="/moments-gallery"
+                className="group inline-flex items-center gap-3 px-12 py-5 text-sm font-light tracking-[0.3em] uppercase transition-all duration-500 border border-white/30 hover:border-[#C8A96A] backdrop-blur-sm hover:scale-105"
+                style={{ color: '#FAF9F7' }}
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-[#B89858] to-[#D4B87A] translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-700"></div>
-                <span className="relative flex items-center gap-3 text-white">
-                  Explore Collections
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform duration-300" />
-                </span>
-              </Link>
-              <Link
-                href="/book-discussion"
-                className="group px-16 py-6 border-2 text-sm font-light tracking-[0.3em] uppercase transition-all duration-500 relative overflow-hidden"
-                style={{ borderColor: '#C8A96A', color: '#FAF9F7' }}
-              >
-                <div className="absolute inset-0 translate-y-[100%] group-hover:translate-y-0 transition-transform duration-500" style={{ backgroundColor: '#C8A96A' }}></div>
-                <span className="relative">Book Private Consultation</span>
+                <span className="relative">Explore Our Stories</span>
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform duration-300" />
               </Link>
             </motion.div>
           </motion.div>
         </motion.div>
         
-        {/* Scroll Indicator - Elegant */}
+        {/* Scroll Indicator */}
         <motion.div 
           animate={{ y: [0, 12, 0] }}
           transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
           className="absolute bottom-16 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3"
         >
-          <span className="text-xs tracking-[0.4em] uppercase text-[#C8A96A] font-light">Scroll</span>
-          <div className="w-px h-20 bg-gradient-to-b from-[#C8A96A] via-[#C8A96A]/50 to-transparent"></div>
+          <div className="w-px h-16 bg-gradient-to-b from-white/50 to-transparent"></div>
         </motion.div>
+      </section>
+
+      {/* 🔟 "Moments" Gallery - Emotion Converts Better Than Perfection */}
+      <section className="section-padding relative overflow-hidden" style={{ backgroundColor: '#FAF9F7' }}>
+        <div className="max-w-7xl mx-auto container-padding">
+          {/* Section Header */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1 }}
+            className="text-center mb-20"
+          >
+            <div className="flex items-center justify-center gap-4 mb-6">
+              <div className="w-12 h-px" style={{ backgroundColor: '#C8A96A' }}></div>
+              <Heart className="w-5 h-5" style={{ color: '#C8A96A' }} />
+              <div className="w-12 h-px" style={{ backgroundColor: '#C8A96A' }}></div>
+            </div>
+            
+            <h2 className="text-5xl md:text-6xl font-light mb-6" style={{ fontFamily: 'var(--font-cormorant)', color: '#1C1C1C' }}>
+              Real Moments. Real Emotions.
+            </h2>
+            
+            <p className="text-lg font-light max-w-2xl mx-auto" style={{ color: '#1C1C1C', opacity: 0.7 }}>
+              Not models posing — just authentic moments of love, joy, and connection
+            </p>
+          </motion.div>
+
+          {/* Moments Grid - Asymmetric Layout */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+            {/* Large Moment 1 */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="col-span-2 row-span-2 relative group overflow-hidden"
+            >
+              <div className="aspect-square relative">
+                <Image
+                  src="/Designer Lehengas.png"
+                  alt="Mother fixing daughter's dupatta"
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-1000"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                  <p className="text-white text-sm font-light italic" style={{ fontFamily: 'var(--font-cormorant)' }}>
+                    "Mother fixing daughter's dupatta"
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Small Moment 1 */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="col-span-2 md:col-span-1 relative group overflow-hidden"
+            >
+              <div className="aspect-square relative">
+                <Image
+                  src="/Designer Sarees.png"
+                  alt="Bride smiling in mirror"
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-1000"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                  <p className="text-white text-xs font-light italic" style={{ fontFamily: 'var(--font-cormorant)' }}>
+                    "Bride smiling in mirror"
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Small Moment 2 */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="col-span-2 md:col-span-1 relative group overflow-hidden"
+            >
+              <div className="aspect-square relative">
+                <Image
+                  src="/Party & Occasion Wear.png"
+                  alt="Child playing in lehenga"
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-1000"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                  <p className="text-white text-xs font-light italic" style={{ fontFamily: 'var(--font-cormorant)' }}>
+                    "Child playing in lehenga"
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Medium Moment */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="col-span-2 md:col-span-1 relative group overflow-hidden"
+            >
+              <div className="aspect-square relative">
+                <Image
+                  src="/Custom Blouse Stitching.png"
+                  alt="Grandmother's blessing moment"
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-1000"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                  <p className="text-white text-xs font-light italic" style={{ fontFamily: 'var(--font-cormorant)' }}>
+                    "Grandmother's blessing"
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Wide Moment */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="col-span-2 md:col-span-3 relative group overflow-hidden"
+            >
+              <div className="aspect-[2/1] relative">
+                <Image
+                  src="/bride sarees.png"
+                  alt="Family gathering moment"
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-1000"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                  <p className="text-white text-sm font-light italic" style={{ fontFamily: 'var(--font-cormorant)' }}>
+                    "Family celebration together"
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* CTA */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="text-center mt-16"
+          >
+            <Link
+              href="/client-stories"
+              className="group inline-flex items-center gap-3 px-12 py-5 text-sm font-light tracking-[0.3em] uppercase transition-all duration-500 border-2 hover:scale-105"
+              style={{ borderColor: '#C8A96A', color: '#1C1C1C' }}
+            >
+              View More Stories
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* 11️⃣ Video Micro-Stories - Silent Videos = Luxury Feel */}
+      <section className="section-padding relative overflow-hidden" style={{ backgroundColor: '#1C1C1C' }}>
+        <div className="max-w-7xl mx-auto container-padding">
+          {/* Section Header */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1 }}
+            className="text-center mb-20"
+          >
+            <div className="flex items-center justify-center gap-4 mb-6">
+              <Sparkles className="w-5 h-5" style={{ color: '#C8A96A' }} />
+              <span className="text-xs tracking-[0.5em] uppercase font-light" style={{ color: '#C8A96A' }}>Craftsmanship in Motion</span>
+              <Sparkles className="w-5 h-5" style={{ color: '#C8A96A' }} />
+            </div>
+            
+            <h2 className="text-5xl md:text-6xl font-light mb-6" style={{ fontFamily: 'var(--font-cormorant)', color: '#FAF9F7' }}>
+              The Art of Creation
+            </h2>
+            
+            <p className="text-lg font-light max-w-2xl mx-auto" style={{ color: '#FAF9F7', opacity: 0.7 }}>
+              Silent stories of fabric, embroidery, and meticulous craftsmanship
+            </p>
+          </motion.div>
+
+          {/* Video Grid */}
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Video 1: Fabric Flowing */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="group relative overflow-hidden"
+            >
+              <div className="aspect-[3/4] relative bg-gradient-to-br from-[#C8A96A]/10 to-transparent border" style={{ borderColor: 'rgba(200, 169, 106, 0.2)' }}>
+                {/* Placeholder for video - will be replaced with actual video element */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <Image
+                    src="/Designer Sarees.png"
+                    alt="Fabric flowing"
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-1000"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                </div>
+                
+                {/* Play Indicator */}
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <div className="w-16 h-16 rounded-full flex items-center justify-center backdrop-blur-sm" style={{ backgroundColor: 'rgba(200, 169, 106, 0.9)' }}>
+                    <div className="w-0 h-0 border-l-8 border-t-6 border-b-6 border-l-white border-t-transparent border-b-transparent ml-1"></div>
+                  </div>
+                </div>
+
+                {/* Title Overlay */}
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <p className="text-white text-sm font-light tracking-wide" style={{ fontFamily: 'var(--font-cormorant)' }}>
+                    Fabric Flowing
+                  </p>
+                  <p className="text-white/60 text-xs mt-1">The grace of silk in motion</p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Video 2: Needle Embroidery */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="group relative overflow-hidden"
+            >
+              <div className="aspect-[3/4] relative bg-gradient-to-br from-[#C8A96A]/10 to-transparent border" style={{ borderColor: 'rgba(200, 169, 106, 0.2)' }}>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <Image
+                    src="/Custom Blouse Stitching.png"
+                    alt="Needle embroidery"
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-1000"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                </div>
+                
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <div className="w-16 h-16 rounded-full flex items-center justify-center backdrop-blur-sm" style={{ backgroundColor: 'rgba(200, 169, 106, 0.9)' }}>
+                    <div className="w-0 h-0 border-l-8 border-t-6 border-b-6 border-l-white border-t-transparent border-b-transparent ml-1"></div>
+                  </div>
+                </div>
+
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <p className="text-white text-sm font-light tracking-wide" style={{ fontFamily: 'var(--font-cormorant)' }}>
+                    Hand Embroidery
+                  </p>
+                  <p className="text-white/60 text-xs mt-1">Every stitch tells a story</p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Video 3: Bangle Detailing */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="group relative overflow-hidden"
+            >
+              <div className="aspect-[3/4] relative bg-gradient-to-br from-[#C8A96A]/10 to-transparent border" style={{ borderColor: 'rgba(200, 169, 106, 0.2)' }}>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <Image
+                    src="/Designer Lehengas.png"
+                    alt="Bangle detailing"
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-1000"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                </div>
+                
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <div className="w-16 h-16 rounded-full flex items-center justify-center backdrop-blur-sm" style={{ backgroundColor: 'rgba(200, 169, 106, 0.9)' }}>
+                    <div className="w-0 h-0 border-l-8 border-t-6 border-b-6 border-l-white border-t-transparent border-b-transparent ml-1"></div>
+                  </div>
+                </div>
+
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <p className="text-white text-sm font-light tracking-wide" style={{ fontFamily: 'var(--font-cormorant)' }}>
+                    Intricate Details
+                  </p>
+                  <p className="text-white/60 text-xs mt-1">Precision in every element</p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* CTA */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-center mt-16"
+          >
+            <Link
+              href="/behind-the-scenes"
+              className="group inline-flex items-center gap-3 px-12 py-5 text-sm font-light tracking-[0.3em] uppercase transition-all duration-500 border hover:scale-105"
+              style={{ borderColor: '#C8A96A', color: '#FAF9F7' }}
+            >
+              Behind the Scenes
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
+            </Link>
+          </motion.div>
+        </div>
       </section>
 
       {/* About Preview - Sophisticated Split */}
@@ -811,7 +1050,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Luxury Features Section */}
+      {/* Advanced Features - Virtual Try-On & AI Assistant */}
       <section className="section-padding bg-white">
         <div className="max-w-7xl mx-auto container-padding">
           <motion.div
@@ -820,14 +1059,100 @@ export default function HomePage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
+            <div className="flex items-center justify-center gap-4 mb-6">
+              <Sparkles className="w-5 h-5" style={{ color: '#C8A96A' }} />
+              <span className="text-xs tracking-[0.5em] uppercase font-light" style={{ color: '#C8A96A' }}>Advanced Technology</span>
+              <Sparkles className="w-5 h-5" style={{ color: '#C8A96A' }} />
+            </div>
             <h2 className="text-4xl md:text-5xl font-light mb-6" style={{ fontFamily: 'var(--font-cormorant)', color: '#1C1C1C' }}>
-              Discover Your Perfect Style
+              Experience the Future of Fashion
             </h2>
-            <p className="text-lg font-light" style={{ color: '#5E5E5E' }}>
-              Explore our curated experiences designed for you
+            <p className="text-lg font-light max-w-2xl mx-auto" style={{ color: '#5E5E5E' }}>
+              Revolutionary tools to help you find your perfect look
             </p>
           </motion.div>
 
+          {/* Feature Grid */}
+          <div className="grid md:grid-cols-2 gap-8 mb-16">
+            {/* Virtual Try-On */}
+            <motion.div
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="group relative overflow-hidden rounded-lg"
+            >
+              <Link href="/virtual-try-on" className="block">
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <Image
+                    src="/Designer Lehengas.png"
+                    alt="Virtual Try-On"
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-1000"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
+                  
+                  <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-8">
+                    <div className="w-16 h-16 rounded-full flex items-center justify-center mb-6" style={{ backgroundColor: 'rgba(200, 169, 106, 0.9)' }}>
+                      <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>
+                    </div>
+                    <h3 className="text-3xl font-light text-white mb-4" style={{ fontFamily: 'var(--font-cormorant)' }}>
+                      Virtual Try-On
+                    </h3>
+                    <p className="text-white/90 font-light mb-6 leading-relaxed">
+                      Upload your photo and preview our designs digitally on yourself. See before you decide.
+                    </p>
+                    <div className="flex items-center gap-2 text-sm font-light tracking-wider uppercase" style={{ color: '#C8A96A' }}>
+                      <span>Try Now</span>
+                      <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </motion.div>
+
+            {/* AI Style Assistant */}
+            <motion.div
+              initial={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="group relative overflow-hidden rounded-lg"
+            >
+              <Link href="/ai-style-assistant" className="block">
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <Image
+                    src="/Designer Sarees.png"
+                    alt="AI Style Assistant"
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-1000"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
+                  
+                  <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-8">
+                    <div className="w-16 h-16 rounded-full flex items-center justify-center mb-6" style={{ backgroundColor: 'rgba(200, 169, 106, 0.9)' }}>
+                      <Sparkles className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-3xl font-light text-white mb-4" style={{ fontFamily: 'var(--font-cormorant)' }}>
+                      AI Style Curator
+                    </h3>
+                    <p className="text-white/90 font-light mb-6 leading-relaxed">
+                      Answer a few questions and let AI recommend perfect designs tailored to your preferences.
+                    </p>
+                    <div className="flex items-center gap-2 text-sm font-light tracking-wider uppercase" style={{ color: '#C8A96A' }}>
+                      <span>Get Recommendations</span>
+                      <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </motion.div>
+          </div>
+
+          {/* Additional Features Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -835,13 +1160,14 @@ export default function HomePage() {
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
             >
-              <Link href="/by-occasion" className="group block">
-                <div className="relative aspect-[3/4] overflow-hidden mb-4">
-                  <Image src="/Designer Lehengas.png" alt="Shop by Occasion" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+              <Link href="/moments-gallery" className="group block">
+                <div className="relative aspect-[3/4] overflow-hidden mb-4 rounded-lg">
+                  <Image src="/bride sarees.png" alt="Moments Gallery" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                   <div className="absolute bottom-6 left-6 right-6">
-                    <h3 className="text-2xl font-light text-white mb-2" style={{ fontFamily: 'var(--font-cormorant)' }}>Shop by Occasion</h3>
-                    <p className="text-sm text-white/90 font-light">Find outfits for your event</p>
+                    <Heart className="w-6 h-6 text-[#C8A96A] mb-3" />
+                    <h3 className="text-2xl font-light text-white mb-2" style={{ fontFamily: 'var(--font-cormorant)' }}>Real Moments</h3>
+                    <p className="text-sm text-white/90 font-light">Authentic emotions captured</p>
                   </div>
                 </div>
               </Link>
@@ -853,13 +1179,13 @@ export default function HomePage() {
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
             >
-              <Link href="/style-quiz" className="group block">
-                <div className="relative aspect-[3/4] overflow-hidden mb-4">
-                  <Image src="/Designer Sarees.png" alt="Style Quiz" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+              <Link href="/by-occasion" className="group block">
+                <div className="relative aspect-[3/4] overflow-hidden mb-4 rounded-lg">
+                  <Image src="/Designer Lehengas.png" alt="Shop by Occasion" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                   <div className="absolute bottom-6 left-6 right-6">
-                    <h3 className="text-2xl font-light text-white mb-2" style={{ fontFamily: 'var(--font-cormorant)' }}>Style Quiz</h3>
-                    <p className="text-sm text-white/90 font-light">Discover your aesthetic</p>
+                    <h3 className="text-2xl font-light text-white mb-2" style={{ fontFamily: 'var(--font-cormorant)' }}>By Occasion</h3>
+                    <p className="text-sm text-white/90 font-light">Find outfits for your event</p>
                   </div>
                 </div>
               </Link>
@@ -872,7 +1198,7 @@ export default function HomePage() {
               transition={{ delay: 0.3 }}
             >
               <Link href="/mother-daughter-showcase" className="group block">
-                <div className="relative aspect-[3/4] overflow-hidden mb-4">
+                <div className="relative aspect-[3/4] overflow-hidden mb-4 rounded-lg">
                   <Image src="/Party & Occasion Wear.png" alt="Mother-Daughter Sets" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                   <div className="absolute bottom-6 left-6 right-6">
@@ -889,12 +1215,12 @@ export default function HomePage() {
               viewport={{ once: true }}
               transition={{ delay: 0.4 }}
             >
-              <Link href="/design-journey" className="group block">
-                <div className="relative aspect-[3/4] overflow-hidden mb-4">
-                  <Image src="/Designer Lehengas.png" alt="Design Journey" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+              <Link href="/behind-the-scenes" className="group block">
+                <div className="relative aspect-[3/4] overflow-hidden mb-4 rounded-lg">
+                  <Image src="/Custom Blouse Stitching.png" alt="Behind the Scenes" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                   <div className="absolute bottom-6 left-6 right-6">
-                    <h3 className="text-2xl font-light text-white mb-2" style={{ fontFamily: 'var(--font-cormorant)' }}>Our Process</h3>
+                    <h3 className="text-2xl font-light text-white mb-2" style={{ fontFamily: 'var(--font-cormorant)' }}>Our Craft</h3>
                     <p className="text-sm text-white/90 font-light">See how we create magic</p>
                   </div>
                 </div>
@@ -1031,6 +1357,12 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
+
+      {/* Sticky Consultation Bar */}
+      <StickyConsultationBar />
+
+      {/* Live Chat Widget */}
+      <LiveChat />
     </div>
   );
 }

@@ -17,10 +17,10 @@ export default function Header() {
     { name: 'Home', path: '/' },
     { name: 'Shop by Occasion', path: '/by-occasion' },
     { name: 'Collections', path: '/collections' },
-    { name: 'Design Journey', path: '/design-journey' },
-    { name: 'Our Story', path: '/behind-the-scenes' },
+    { name: 'Virtual Try-On', path: '/virtual-try-on' },
+    { name: 'AI Style Assistant', path: '/ai-style-assistant' },
+    { name: 'Moments Gallery', path: '/moments-gallery' },
     { name: 'Client Stories', path: '/client-stories' },
-    { name: 'Style Quiz', path: '/style-quiz' },
   ];
 
   return (
