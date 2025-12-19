@@ -275,10 +275,10 @@ export default function StyleQuizPage() {
                             <h3 className="text-lg font-medium text-[#1C1C1C] mb-1 group-hover:text-[#C8A96A] transition-colors">
                               {option.label}
                             </h3>
-                            {option.desc && (
+                            {'desc' in option && option.desc && (
                               <p className="text-sm font-light text-gray-600">{option.desc}</p>
                             )}
-                            {option.color && (
+                            {'color' in option && option.color && (
                               <div className="mt-3 flex items-center gap-2">
                                 <div className="w-6 h-6 rounded-full border-2 border-white shadow-md" style={{ backgroundColor: option.color }}></div>
                                 <span className="text-xs text-gray-500">Color preview</span>
