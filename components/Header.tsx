@@ -1,0 +1,92 @@
+'use client';
+
+import Link from 'next/link';
+import { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Menu, X } from 'lucide-react';
+
+export default function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const navItems = [
+    { name: 'Home', path: '/' },
+    { name: 'About', path: '/about' },
+    { name: 'Services', path: '/services' },
+    { name: 'Collections', path: '/collections' },
+    { name: 'Design Process', path: '/design-process' },
+    { name: 'Testimonials', path: '/testimonials' },
+    { name: 'FAQ', path: '/faq' },
+    { name: 'Contact', path: '/contact' },
+  ];
+
+  return (
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#FAF9F7]/95 backdrop-blur-md border-b border-[#C8A96A]/20 shadow-sm">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-20">
+          {/* Logo */}
+          <Link href="/" className="text-2xl md:text-3xl font-light tracking-[0.3em] text-[#1C1C1C]" style={{ fontFamily: 'var(--font-cormorant)' }}>
+            ADHYA
+          </Link>
+
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center space-x-8">
+            {navItems.map((item) => (
+              <Link
+                key={item.path}
+                href={item.path}
+                className="text-sm font-light tracking-wide text-[#5E5E5E] hover:text-[#C8A96A] transition-colors"
+              >
+                {item.name}
+              </Link>
+            ))}
+            <Link
+              href="/book-discussion"
+              className="px-8 py-3 bg-[#C8A96A] text-white text-sm font-light tracking-widest hover:bg-[#1C1C1C] transition-all shadow-md hover:shadow-lg"
+            >
+              BOOK CONSULTATION
+            </Link>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="lg:hidden p-2 text-[#1C1C1C]"
+            aria-label="Toggle menu"
+          >
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+
+        {/* Mobile Menu */}
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="lg:hidden pb-6 border-t border-[#C8A96A]/20 mt-2 pt-4"
+          >
+            <div className="flex flex-col space-y-4">
+              {navItems.map((item) => (
+                <Link
+                  key={item.path}
+                  href={item.path}
+                  onClick={() => setIsOpen(false)}
+                  className="text-sm font-light tracking-wide text-[#5E5E5E] hover:text-[#C8A96A] transition-colors"
+                >
+                  {item.name}
+                </Link>
+              ))}
+              <Link
+                href="/book-discussion"
+                onClick={() => setIsOpen(false)}
+                className="px-8 py-3 bg-[#C8A96A] text-white text-sm font-light tracking-widest hover:bg-[#1C1C1C] transition-all text-center shadow-md"
+              >
+                BOOK CONSULTATION
+              </Link>
+            </div>
+          </motion.div>
+        )}
+      </nav>
+    </header>
+  );
+}
