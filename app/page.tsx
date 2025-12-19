@@ -773,7 +773,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Advanced Features - Virtual Try-On & AI Assistant */
+      {/* Advanced Features - Virtual Try-On & AI Assistant */}
       <section className="section-padding bg-white">
         <div className="max-w-7xl mx-auto container-padding">
           <motion.div
@@ -1072,7 +1072,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 🔟 "Moments" Gallery - Emotion Converts Better Than Perfection */
+      {/* 🔟 "Moments" Gallery - Emotion Converts Better Than Perfection */}
       <section className="section-padding relative overflow-hidden" style={{ backgroundColor: '#FAF9F7' }}>
         <div className="max-w-7xl mx-auto container-padding">
           {/* Section Header */}
