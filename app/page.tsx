@@ -157,160 +157,6 @@ export default function HomePage() {
         </motion.div>
       </section>
 
-      {/* 11️⃣ Video Micro-Stories - Silent Videos = Luxury Feel */}
-      <section className="section-padding relative overflow-hidden" style={{ backgroundColor: '#1C1C1C' }}>
-        <div className="max-w-7xl mx-auto container-padding">
-          {/* Section Header */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1 }}
-            className="text-center mb-20"
-          >
-            <div className="flex items-center justify-center gap-4 mb-6">
-              <Sparkles className="w-5 h-5" style={{ color: '#C8A96A' }} />
-              <span className="text-xs tracking-[0.5em] uppercase font-light" style={{ color: '#C8A96A' }}>Craftsmanship in Motion</span>
-              <Sparkles className="w-5 h-5" style={{ color: '#C8A96A' }} />
-            </div>
-            
-            <h2 className="text-5xl md:text-6xl font-light mb-6" style={{ fontFamily: 'var(--font-cormorant)', color: '#FAF9F7' }}>
-              The Art of Creation
-            </h2>
-            
-            <p className="text-lg font-light max-w-2xl mx-auto" style={{ color: '#FAF9F7', opacity: 0.7 }}>
-              Silent stories of fabric, embroidery, and meticulous craftsmanship
-            </p>
-          </motion.div>
-
-          {/* Video Grid */}
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Video 1: Fabric Flowing */}
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="group relative overflow-hidden"
-            >
-              <div className="aspect-[3/4] relative bg-gradient-to-br from-[#C8A96A]/10 to-transparent border" style={{ borderColor: 'rgba(200, 169, 106, 0.2)' }}>
-                {/* Placeholder for video - will be replaced with actual video element */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <Image
-                    src="/Designer Sarees.png"
-                    alt="Fabric flowing"
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-1000"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
-                </div>
-                
-                {/* Play Indicator */}
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <div className="w-16 h-16 rounded-full flex items-center justify-center backdrop-blur-sm" style={{ backgroundColor: 'rgba(200, 169, 106, 0.9)' }}>
-                    <div className="w-0 h-0 border-l-8 border-t-6 border-b-6 border-l-white border-t-transparent border-b-transparent ml-1"></div>
-                  </div>
-                </div>
-
-                {/* Title Overlay */}
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <p className="text-white text-sm font-light tracking-wide" style={{ fontFamily: 'var(--font-cormorant)' }}>
-                    Fabric Flowing
-                  </p>
-                  <p className="text-white/60 text-xs mt-1">The grace of silk in motion</p>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Video 2: Needle Embroidery */}
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              className="group relative overflow-hidden"
-            >
-              <div className="aspect-[3/4] relative bg-gradient-to-br from-[#C8A96A]/10 to-transparent border" style={{ borderColor: 'rgba(200, 169, 106, 0.2)' }}>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <Image
-                    src="/Custom Blouse Stitching.png"
-                    alt="Needle embroidery"
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-1000"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
-                </div>
-                
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <div className="w-16 h-16 rounded-full flex items-center justify-center backdrop-blur-sm" style={{ backgroundColor: 'rgba(200, 169, 106, 0.9)' }}>
-                    <div className="w-0 h-0 border-l-8 border-t-6 border-b-6 border-l-white border-t-transparent border-b-transparent ml-1"></div>
-                  </div>
-                </div>
-
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <p className="text-white text-sm font-light tracking-wide" style={{ fontFamily: 'var(--font-cormorant)' }}>
-                    Hand Embroidery
-                  </p>
-                  <p className="text-white/60 text-xs mt-1">Every stitch tells a story</p>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Video 3: Bangle Detailing */}
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="group relative overflow-hidden"
-            >
-              <div className="aspect-[3/4] relative bg-gradient-to-br from-[#C8A96A]/10 to-transparent border" style={{ borderColor: 'rgba(200, 169, 106, 0.2)' }}>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <Image
-                    src="/Designer Lehengas.png"
-                    alt="Bangle detailing"
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-1000"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
-                </div>
-                
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <div className="w-16 h-16 rounded-full flex items-center justify-center backdrop-blur-sm" style={{ backgroundColor: 'rgba(200, 169, 106, 0.9)' }}>
-                    <div className="w-0 h-0 border-l-8 border-t-6 border-b-6 border-l-white border-t-transparent border-b-transparent ml-1"></div>
-                  </div>
-                </div>
-
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <p className="text-white text-sm font-light tracking-wide" style={{ fontFamily: 'var(--font-cormorant)' }}>
-                    Intricate Details
-                  </p>
-                  <p className="text-white/60 text-xs mt-1">Precision in every element</p>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-
-          {/* CTA */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-center mt-16"
-          >
-            <Link
-              href="/behind-the-scenes"
-              className="group inline-flex items-center gap-3 px-12 py-5 text-sm font-light tracking-[0.3em] uppercase transition-all duration-500 border hover:scale-105"
-              style={{ borderColor: '#C8A96A', color: '#FAF9F7' }}
-            >
-              Behind the Scenes
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
-            </Link>
-          </motion.div>
-        </div>
-      </section>
-
       {/* About Preview - Sophisticated Split */}
       <section className="section-padding" style={{ backgroundColor: '#FAF9F7' }}>
         <div className="max-w-7xl mx-auto container-padding">
@@ -771,6 +617,157 @@ export default function HomePage() {
               style={{ borderColor: '#1C1C1C', color: '#1C1C1C' }}
             >
               Explore All Collections
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* 11️⃣ Video Micro-Stories - Silent Videos = Luxury Feel */}
+      <section className="section-padding relative overflow-hidden" style={{ backgroundColor: '#1C1C1C' }}>
+        <div className="max-w-7xl mx-auto container-padding">
+          {/* Section Header */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1 }}
+            className="text-center mb-20"
+          >
+            <div className="flex items-center justify-center gap-4 mb-6">
+              <Sparkles className="w-5 h-5" style={{ color: '#C8A96A' }} />
+              <span className="text-xs tracking-[0.5em] uppercase font-light" style={{ color: '#C8A96A' }}>Craftsmanship in Motion</span>
+              <Sparkles className="w-5 h-5" style={{ color: '#C8A96A' }} />
+            </div>
+            
+            <h2 className="text-5xl md:text-6xl font-light mb-6" style={{ fontFamily: 'var(--font-cormorant)', color: '#FAF9F7' }}>
+              The Art of Creation
+            </h2>
+            
+            <p className="text-lg font-light max-w-2xl mx-auto" style={{ color: '#FAF9F7', opacity: 0.7 }}>
+              Silent stories of fabric, embroidery, and meticulous craftsmanship
+            </p>
+          </motion.div>
+
+          {/* Video Grid */}
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Video 1: Fabric Flowing */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="group relative overflow-hidden"
+            >
+              <div className="aspect-[3/4] relative bg-gradient-to-br from-[#C8A96A]/10 to-transparent border" style={{ borderColor: 'rgba(200, 169, 106, 0.2)' }}>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <Image
+                    src="/Designer Sarees.png"
+                    alt="Fabric flowing"
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-1000"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                </div>
+                
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <div className="w-16 h-16 rounded-full flex items-center justify-center backdrop-blur-sm" style={{ backgroundColor: 'rgba(200, 169, 106, 0.9)' }}>
+                    <div className="w-0 h-0 border-l-8 border-t-6 border-b-6 border-l-white border-t-transparent border-b-transparent ml-1"></div>
+                  </div>
+                </div>
+
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <p className="text-white text-sm font-light tracking-wide" style={{ fontFamily: 'var(--font-cormorant)' }}>
+                    Fabric Flowing
+                  </p>
+                  <p className="text-white/60 text-xs mt-1">The grace of silk in motion</p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Video 2: Needle Embroidery */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="group relative overflow-hidden"
+            >
+              <div className="aspect-[3/4] relative bg-gradient-to-br from-[#C8A96A]/10 to-transparent border" style={{ borderColor: 'rgba(200, 169, 106, 0.2)' }}>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <Image
+                    src="/Custom Blouse Stitching.png"
+                    alt="Needle embroidery"
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-1000"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                </div>
+                
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <div className="w-16 h-16 rounded-full flex items-center justify-center backdrop-blur-sm" style={{ backgroundColor: 'rgba(200, 169, 106, 0.9)' }}>
+                    <div className="w-0 h-0 border-l-8 border-t-6 border-b-6 border-l-white border-t-transparent border-b-transparent ml-1"></div>
+                  </div>
+                </div>
+
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <p className="text-white text-sm font-light tracking-wide" style={{ fontFamily: 'var(--font-cormorant)' }}>
+                    Hand Embroidery
+                  </p>
+                  <p className="text-white/60 text-xs mt-1">Every stitch tells a story</p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Video 3: Bangle Detailing */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="group relative overflow-hidden"
+            >
+              <div className="aspect-[3/4] relative bg-gradient-to-br from-[#C8A96A]/10 to-transparent border" style={{ borderColor: 'rgba(200, 169, 106, 0.2)' }}>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <Image
+                    src="/Designer Lehengas.png"
+                    alt="Bangle detailing"
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-1000"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                </div>
+                
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <div className="w-16 h-16 rounded-full flex items-center justify-center backdrop-blur-sm" style={{ backgroundColor: 'rgba(200, 169, 106, 0.9)' }}>
+                    <div className="w-0 h-0 border-l-8 border-t-6 border-b-6 border-l-white border-t-transparent border-b-transparent ml-1"></div>
+                  </div>
+                </div>
+
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <p className="text-white text-sm font-light tracking-wide" style={{ fontFamily: 'var(--font-cormorant)' }}>
+                    Intricate Details
+                  </p>
+                  <p className="text-white/60 text-xs mt-1">Precision in every element</p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* CTA */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-center mt-16"
+          >
+            <Link
+              href="/behind-the-scenes"
+              className="group inline-flex items-center gap-3 px-12 py-5 text-sm font-light tracking-[0.3em] uppercase transition-all duration-500 border hover:scale-105"
+              style={{ borderColor: '#C8A96A', color: '#FAF9F7' }}
+            >
+              Behind the Scenes
               <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
             </Link>
           </motion.div>
