@@ -3,10 +3,15 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ShoppingBag } from 'lucide-react';
+import { useCart } from '@/context/CartContext';
+import Cart from './Cart';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isCartOpen, setIsCartOpen] = useState(false);
+  const { getCartCount } = useCart();
+  const cartCount = getCartCount();
 
   const navItems = [
     { name: 'Home', path: '/' },
@@ -39,6 +44,21 @@ export default function Header() {
                 {item.name}
               </Link>
             ))}
+            
+            {/* Cart Icon */}
+            <button
+              onClick={() => setIsCartOpen(true)}
+              className="relative p-2 text-[#5E5E5E] hover:text-[#C8A96A] transition-colors"
+              aria-label="Shopping cart"
+            >
+              <ShoppingBag size={20} />
+              {cartCount > 0 && (
+                <span className="absolute -top-1 -right-1 w-5 h-5 bg-[#C8A96A] text-white text-xs rounded-full flex items-center justify-center">
+                  {cartCount}
+                </span>
+              )}
+            </button>
+            
             <Link
               href="/book-discussion"
               className="px-8 py-3 bg-[#C8A96A] text-white text-sm font-light tracking-widest hover:bg-[#1C1C1C] transition-all shadow-md hover:shadow-lg"
@@ -48,13 +68,29 @@ export default function Header() {
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 text-[#1C1C1C]"
-            aria-label="Toggle menu"
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          <div className="lg:hidden flex items-center gap-4">
+            {/* Mobile Cart Icon */}
+            <button
+              onClick={() => setIsCartOpen(true)}
+              className="relative p-2 text-[#1C1C1C]"
+              aria-label="Shopping cart"
+            >
+              <ShoppingBag size={20} />
+              {cartCount > 0 && (
+                <span className="absolute -top-1 -right-1 w-5 h-5 bg-[#C8A96A] text-white text-xs rounded-full flex items-center justify-center">
+                  {cartCount}
+                </span>
+              )}
+            </button>
+            
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="p-2 text-[#1C1C1C]"
+              aria-label="Toggle menu"
+            >
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
@@ -87,6 +123,9 @@ export default function Header() {
           </motion.div>
         )}
       </nav>
+      
+      {/* Cart Sidebar */}
+      <Cart isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
     </header>
   );
 }

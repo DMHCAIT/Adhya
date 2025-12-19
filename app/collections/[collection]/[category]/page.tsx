@@ -3,9 +3,10 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowLeft, Check, Package, Palette, Ruler, MessageCircle, X, Sparkles } from 'lucide-react';
+import { ArrowLeft, Check, Package, Palette, Ruler, MessageCircle, X, Sparkles, ShoppingCart } from 'lucide-react';
 import { useState } from 'react';
 import { useParams } from 'next/navigation';
+import { useCart } from '@/context/CartContext';
 
 // Product interface
 interface Product {
@@ -821,6 +822,7 @@ export default function CategoryDetailPage() {
   const params = useParams();
   const collection = params.collection as string;
   const category = params.category as string;
+  const { addToCart } = useCart();
 
   const [selectedFabric, setSelectedFabric] = useState('');
   const [selectedDesign, setSelectedDesign] = useState('');
@@ -1475,23 +1477,43 @@ export default function CategoryDetailPage() {
                   <div className="grid grid-cols-2 gap-4">
                     <button
                       onClick={() => {
-                        // Add to cart functionality
-                        alert(`Added ${selectedProduct.name} to cart!`);
+                        addToCart({
+                          id: selectedProduct.id,
+                          name: selectedProduct.name,
+                          price: selectedProduct.price,
+                          image: selectedProduct.image,
+                          fabric: selectedProduct.fabric,
+                          work: selectedProduct.work,
+                          color: selectedProduct.color,
+                          category: category,
+                          collection: collection
+                        });
                       }}
                       className="py-4 bg-[#1C1C1C] text-white hover:bg-black transition-colors text-sm tracking-wider font-light flex items-center justify-center gap-2"
                     >
-                      <Package className="w-4 h-4" />
+                      <ShoppingCart className="w-4 h-4" />
                       ADD TO CART
                     </button>
-                    <button
+                    <Link
+                      href="/checkout"
                       onClick={() => {
-                        // Buy now functionality
-                        alert(`Proceeding to checkout for ${selectedProduct.name}`);
+                        addToCart({
+                          id: selectedProduct.id,
+                          name: selectedProduct.name,
+                          price: selectedProduct.price,
+                          image: selectedProduct.image,
+                          fabric: selectedProduct.fabric,
+                          work: selectedProduct.work,
+                          color: selectedProduct.color,
+                          category: category,
+                          collection: collection
+                        });
+                        closeProductModal();
                       }}
-                      className="py-4 bg-[#C8A96A] text-white hover:bg-[#B8956A] transition-colors text-sm tracking-wider font-light"
+                      className="py-4 bg-[#C8A96A] text-white hover:bg-[#B8956A] transition-colors text-sm tracking-wider font-light flex items-center justify-center"
                     >
                       BUY NOW
-                    </button>
+                    </Link>
                   </div>
                   
                   <button
