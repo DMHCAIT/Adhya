@@ -777,111 +777,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Testimonials - Luxury Design */}
-      <section className="section-padding relative overflow-hidden" style={{ backgroundColor: '#1C1C1C' }}>
-        {/* Decorative Pattern */}
-        <div className="absolute inset-0 opacity-[0.02]">
-          <div className="absolute inset-0" style={{
-            backgroundImage: 'radial-gradient(circle, #C8A96A 1px, transparent 1px)',
-            backgroundSize: '50px 50px'
-          }}></div>
-        </div>
-        
-        <div className="max-w-6xl mx-auto container-padding relative z-10">
-          {/* Section Header */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1 }}
-            className="text-center mb-20"
-          >
-            <div className="flex items-center justify-center gap-4 mb-8">
-              <Star className="w-5 h-5 fill-current" style={{ color: '#C8A96A' }} />
-              <span className="text-xs tracking-[0.5em] uppercase font-light" style={{ color: '#C8A96A' }}>Testimonials</span>
-              <Star className="w-5 h-5 fill-current" style={{ color: '#C8A96A' }} />
-            </div>
-            
-            <h2 className="text-5xl md:text-6xl font-light mb-8" style={{ fontFamily: 'var(--font-cormorant)', color: '#FAF9F7' }}>
-              Voices of Elegance
-            </h2>
-            
-            <div className="w-24 h-px mx-auto" style={{ backgroundColor: '#C8A96A' }}></div>
-          </motion.div>
-
-          {/* Testimonials Grid */}
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.15, ease: [0.22, 1, 0.36, 1] }}
-                className="group relative"
-              >
-                <div className="p-10 border backdrop-blur-sm transition-all duration-700 hover:scale-105 relative overflow-hidden" style={{ 
-                  backgroundColor: 'rgba(250, 249, 247, 0.03)',
-                  borderColor: 'rgba(200, 169, 106, 0.2)'
-                }}>
-                  {/* Quote Mark */}
-                  <div className="absolute top-8 right-8 text-7xl font-serif opacity-10" style={{ color: '#C8A96A' }}>
-                    &ldquo;
-                  </div>
-                  
-                  {/* Stars */}
-                  <div className="flex gap-1 mb-8 relative z-10">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-current" style={{ color: '#C8A96A' }} />
-                    ))}
-                  </div>
-                  
-                  {/* Quote */}
-                  <p className="text-lg font-light mb-10 leading-relaxed italic relative z-10" style={{ 
-                    fontFamily: 'var(--font-cormorant)',
-                    color: '#FAF9F7'
-                  }}>
-                    {testimonial.quote}
-                  </p>
-                  
-                  {/* Author */}
-                  <div className="border-t pt-6 relative z-10" style={{ borderColor: 'rgba(200, 169, 106, 0.2)' }}>
-                    <p className="text-sm tracking-[0.3em] uppercase font-light mb-2" style={{ color: '#FAF9F7' }}>
-                      {testimonial.author}
-                    </p>
-                    <p className="text-xs font-light" style={{ color: '#C8A96A', opacity: 0.7 }}>
-                      {testimonial.role}
-                    </p>
-                  </div>
-
-                  {/* Hover Corner Accent */}
-                  <div className="absolute bottom-0 right-0 w-16 h-16 border-b border-r opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ borderColor: '#C8A96A' }}></div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-          {/* CTA */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="text-center mt-16"
-          >
-            <Link
-              href="/testimonials"
-              className="inline-flex items-center gap-3 font-light tracking-[0.3em] uppercase transition-all duration-500 group"
-              style={{ color: '#C8A96A' }}
-            >
-              Read More Stories
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
-            </Link>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Advanced Features - Virtual Try-On & AI Assistant */}
+      {/* Advanced Features - Virtual Try-On & AI Assistant */
       <section className="section-padding bg-white">
         <div className="max-w-7xl mx-auto container-padding">
           <motion.div
@@ -1077,7 +973,111 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 🔟 "Moments" Gallery - Emotion Converts Better Than Perfection */}
+      {/* Testimonials - Luxury Design */}
+      <section className="section-padding relative overflow-hidden" style={{ backgroundColor: '#1C1C1C' }}>
+        {/* Decorative Pattern */}
+        <div className="absolute inset-0 opacity-[0.02]">
+          <div className="absolute inset-0" style={{
+            backgroundImage: 'radial-gradient(circle, #C8A96A 1px, transparent 1px)',
+            backgroundSize: '50px 50px'
+          }}></div>
+        </div>
+        
+        <div className="max-w-6xl mx-auto container-padding relative z-10">
+          {/* Section Header */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1 }}
+            className="text-center mb-20"
+          >
+            <div className="flex items-center justify-center gap-4 mb-8">
+              <Star className="w-5 h-5 fill-current" style={{ color: '#C8A96A' }} />
+              <span className="text-xs tracking-[0.5em] uppercase font-light" style={{ color: '#C8A96A' }}>Testimonials</span>
+              <Star className="w-5 h-5 fill-current" style={{ color: '#C8A96A' }} />
+            </div>
+            
+            <h2 className="text-5xl md:text-6xl font-light mb-8" style={{ fontFamily: 'var(--font-cormorant)', color: '#FAF9F7' }}>
+              Voices of Elegance
+            </h2>
+            
+            <div className="w-24 h-px mx-auto" style={{ backgroundColor: '#C8A96A' }}></div>
+          </motion.div>
+
+          {/* Testimonials Grid */}
+          <div className="grid md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: index * 0.15, ease: [0.22, 1, 0.36, 1] }}
+                className="group relative"
+              >
+                <div className="p-10 border backdrop-blur-sm transition-all duration-700 hover:scale-105 relative overflow-hidden" style={{ 
+                  backgroundColor: 'rgba(250, 249, 247, 0.03)',
+                  borderColor: 'rgba(200, 169, 106, 0.2)'
+                }}>
+                  {/* Quote Mark */}
+                  <div className="absolute top-8 right-8 text-7xl font-serif opacity-10" style={{ color: '#C8A96A' }}>
+                    &ldquo;
+                  </div>
+                  
+                  {/* Stars */}
+                  <div className="flex gap-1 mb-8 relative z-10">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 fill-current" style={{ color: '#C8A96A' }} />
+                    ))}
+                  </div>
+                  
+                  {/* Quote */}
+                  <p className="text-lg font-light mb-10 leading-relaxed italic relative z-10" style={{ 
+                    fontFamily: 'var(--font-cormorant)',
+                    color: '#FAF9F7'
+                  }}>
+                    {testimonial.quote}
+                  </p>
+                  
+                  {/* Author */}
+                  <div className="border-t pt-6 relative z-10" style={{ borderColor: 'rgba(200, 169, 106, 0.2)' }}>
+                    <p className="text-sm tracking-[0.3em] uppercase font-light mb-2" style={{ color: '#FAF9F7' }}>
+                      {testimonial.author}
+                    </p>
+                    <p className="text-xs font-light" style={{ color: '#C8A96A', opacity: 0.7 }}>
+                      {testimonial.role}
+                    </p>
+                  </div>
+
+                  {/* Hover Corner Accent */}
+                  <div className="absolute bottom-0 right-0 w-16 h-16 border-b border-r opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ borderColor: '#C8A96A' }}></div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* CTA */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="text-center mt-16"
+          >
+            <Link
+              href="/testimonials"
+              className="inline-flex items-center gap-3 font-light tracking-[0.3em] uppercase transition-all duration-500 group"
+              style={{ color: '#C8A96A' }}
+            >
+              Read More Stories
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* 🔟 "Moments" Gallery - Emotion Converts Better Than Perfection */
       <section className="section-padding relative overflow-hidden" style={{ backgroundColor: '#FAF9F7' }}>
         <div className="max-w-7xl mx-auto container-padding">
           {/* Section Header */}
