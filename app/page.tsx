@@ -157,175 +157,6 @@ export default function HomePage() {
         </motion.div>
       </section>
 
-      {/* 🔟 "Moments" Gallery - Emotion Converts Better Than Perfection */}
-      <section className="section-padding relative overflow-hidden" style={{ backgroundColor: '#FAF9F7' }}>
-        <div className="max-w-7xl mx-auto container-padding">
-          {/* Section Header */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1 }}
-            className="text-center mb-20"
-          >
-            <div className="flex items-center justify-center gap-4 mb-6">
-              <div className="w-12 h-px" style={{ backgroundColor: '#C8A96A' }}></div>
-              <Heart className="w-5 h-5" style={{ color: '#C8A96A' }} />
-              <div className="w-12 h-px" style={{ backgroundColor: '#C8A96A' }}></div>
-            </div>
-            
-            <h2 className="text-5xl md:text-6xl font-light mb-6" style={{ fontFamily: 'var(--font-cormorant)', color: '#1C1C1C' }}>
-              Real Moments. Real Emotions.
-            </h2>
-            
-            <p className="text-lg font-light max-w-2xl mx-auto" style={{ color: '#1C1C1C', opacity: 0.7 }}>
-              Not models posing — just authentic moments of love, joy, and connection
-            </p>
-          </motion.div>
-
-          {/* Moments Grid - Asymmetric Layout */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-            {/* Large Moment 1 */}
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="col-span-2 row-span-2 relative group overflow-hidden"
-            >
-              <div className="aspect-square relative">
-                <Image
-                  src="/Designer Lehengas.png"
-                  alt="Mother fixing daughter's dupatta"
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-1000"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                  <p className="text-white text-sm font-light italic" style={{ fontFamily: 'var(--font-cormorant)' }}>
-                    "Mother fixing daughter's dupatta"
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Small Moment 1 */}
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              className="col-span-2 md:col-span-1 relative group overflow-hidden"
-            >
-              <div className="aspect-square relative">
-                <Image
-                  src="/Designer Sarees.png"
-                  alt="Bride smiling in mirror"
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-1000"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                  <p className="text-white text-xs font-light italic" style={{ fontFamily: 'var(--font-cormorant)' }}>
-                    "Bride smiling in mirror"
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Small Moment 2 */}
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="col-span-2 md:col-span-1 relative group overflow-hidden"
-            >
-              <div className="aspect-square relative">
-                <Image
-                  src="/Party & Occasion Wear.png"
-                  alt="Child playing in lehenga"
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-1000"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                  <p className="text-white text-xs font-light italic" style={{ fontFamily: 'var(--font-cormorant)' }}>
-                    "Child playing in lehenga"
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Medium Moment */}
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="col-span-2 md:col-span-1 relative group overflow-hidden"
-            >
-              <div className="aspect-square relative">
-                <Image
-                  src="/Custom Blouse Stitching.png"
-                  alt="Grandmother's blessing moment"
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-1000"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                  <p className="text-white text-xs font-light italic" style={{ fontFamily: 'var(--font-cormorant)' }}>
-                    "Grandmother's blessing"
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Wide Moment */}
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="col-span-2 md:col-span-3 relative group overflow-hidden"
-            >
-              <div className="aspect-[2/1] relative">
-                <Image
-                  src="/bride sarees.png"
-                  alt="Family gathering moment"
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-1000"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                  <p className="text-white text-sm font-light italic" style={{ fontFamily: 'var(--font-cormorant)' }}>
-                    "Family celebration together"
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-
-          {/* CTA */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="text-center mt-16"
-          >
-            <Link
-              href="/client-stories"
-              className="group inline-flex items-center gap-3 px-12 py-5 text-sm font-light tracking-[0.3em] uppercase transition-all duration-500 border-2 hover:scale-105"
-              style={{ borderColor: '#C8A96A', color: '#1C1C1C' }}
-            >
-              View More Stories
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
-            </Link>
-          </motion.div>
-        </div>
-      </section>
-
       {/* 11️⃣ Video Micro-Stories - Silent Videos = Luxury Feel */}
       <section className="section-padding relative overflow-hidden" style={{ backgroundColor: '#1C1C1C' }}>
         <div className="max-w-7xl mx-auto container-padding">
@@ -1241,6 +1072,175 @@ export default function HomePage() {
               style={{ borderColor: '#1C1C1C', color: '#1C1C1C' }}
             >
               EXPLORE FABRIC STORIES
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* 🔟 "Moments" Gallery - Emotion Converts Better Than Perfection */}
+      <section className="section-padding relative overflow-hidden" style={{ backgroundColor: '#FAF9F7' }}>
+        <div className="max-w-7xl mx-auto container-padding">
+          {/* Section Header */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1 }}
+            className="text-center mb-20"
+          >
+            <div className="flex items-center justify-center gap-4 mb-6">
+              <div className="w-12 h-px" style={{ backgroundColor: '#C8A96A' }}></div>
+              <Heart className="w-5 h-5" style={{ color: '#C8A96A' }} />
+              <div className="w-12 h-px" style={{ backgroundColor: '#C8A96A' }}></div>
+            </div>
+            
+            <h2 className="text-5xl md:text-6xl font-light mb-6" style={{ fontFamily: 'var(--font-cormorant)', color: '#1C1C1C' }}>
+              Real Moments. Real Emotions.
+            </h2>
+            
+            <p className="text-lg font-light max-w-2xl mx-auto" style={{ color: '#1C1C1C', opacity: 0.7 }}>
+              Not models posing — just authentic moments of love, joy, and connection
+            </p>
+          </motion.div>
+
+          {/* Moments Grid - Asymmetric Layout */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+            {/* Large Moment 1 */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="col-span-2 row-span-2 relative group overflow-hidden"
+            >
+              <div className="aspect-square relative">
+                <Image
+                  src="/Designer Lehengas.png"
+                  alt="Mother fixing daughter's dupatta"
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-1000"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                  <p className="text-white text-sm font-light italic" style={{ fontFamily: 'var(--font-cormorant)' }}>
+                    "Mother fixing daughter's dupatta"
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Small Moment 1 */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="col-span-2 md:col-span-1 relative group overflow-hidden"
+            >
+              <div className="aspect-square relative">
+                <Image
+                  src="/Designer Sarees.png"
+                  alt="Bride smiling in mirror"
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-1000"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                  <p className="text-white text-xs font-light italic" style={{ fontFamily: 'var(--font-cormorant)' }}>
+                    "Bride smiling in mirror"
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Small Moment 2 */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="col-span-2 md:col-span-1 relative group overflow-hidden"
+            >
+              <div className="aspect-square relative">
+                <Image
+                  src="/Party & Occasion Wear.png"
+                  alt="Child playing in lehenga"
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-1000"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                  <p className="text-white text-xs font-light italic" style={{ fontFamily: 'var(--font-cormorant)' }}>
+                    "Child playing in lehenga"
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Medium Moment */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="col-span-2 md:col-span-1 relative group overflow-hidden"
+            >
+              <div className="aspect-square relative">
+                <Image
+                  src="/Custom Blouse Stitching.png"
+                  alt="Grandmother's blessing moment"
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-1000"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                  <p className="text-white text-xs font-light italic" style={{ fontFamily: 'var(--font-cormorant)' }}>
+                    "Grandmother's blessing"
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Wide Moment */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="col-span-2 md:col-span-3 relative group overflow-hidden"
+            >
+              <div className="aspect-[2/1] relative">
+                <Image
+                  src="/bride sarees.png"
+                  alt="Family gathering moment"
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-1000"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                  <p className="text-white text-sm font-light italic" style={{ fontFamily: 'var(--font-cormorant)' }}>
+                    "Family celebration together"
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* CTA */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="text-center mt-16"
+          >
+            <Link
+              href="/client-stories"
+              className="group inline-flex items-center gap-3 px-12 py-5 text-sm font-light tracking-[0.3em] uppercase transition-all duration-500 border-2 hover:scale-105"
+              style={{ borderColor: '#C8A96A', color: '#1C1C1C' }}
+            >
+              View More Stories
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
             </Link>
           </motion.div>
         </div>
