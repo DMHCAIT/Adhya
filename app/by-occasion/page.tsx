@@ -107,7 +107,7 @@ export default function ByOccasionPage() {
       collections: ['Kids Lehengas', 'Kurta Sets', 'Mother-Daughter Combos'],
       priceRange: '₹8,000 - ₹40,000',
       timeline: '20-30 days',
-      image: '/Children\'s Wear.png',
+      image: '/Party & Occasion Wear.png',
       color: '#87CEEB',
       products: 22
     }

@@ -10,21 +10,21 @@ export default function ChildrensCollectionPage() {
     {
       name: "Party Gowns",
       count: "15+ Designs",
-      image: "/Children's Designer Wear.png",
+      image: "/Party & Occasion Wear.png",
       slug: "party-gowns",
       description: "Vibrant princess-style gowns with net, satin, and silk fabrics - perfect for birthday parties"
     },
     {
       name: "Wedding Lehengas",
       count: "12+ Designs",
-      image: "/Children's Designer Wear.png",
+      image: "/Designer Lehengas.png",
       slug: "wedding-lehengas",
       description: "Comfortable ethnic lehengas with beautiful embroidery for flower girls and little attendees"
     },
     {
       name: "Festive Frocks",
       count: "10+ Designs",
-      image: "/Children's Designer Wear.png",
+      image: "/Designer Sarees.png",
       slug: "festive-frocks",
       description: "Indo-western fusion wear and traditional frocks for festivals and family celebrations"
     }
@@ -51,7 +51,7 @@ export default function ChildrensCollectionPage() {
       <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/Children's Designer Wear.png"
+            src="/Party & Occasion Wear.png"
             alt="Children's Collection"
             fill
             className="object-cover"
