@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Calendar, Clock, User, Mail, Phone, MessageSquare, Sparkles, Check } from 'lucide-react';
+import { Calendar, Clock, User, Mail, Phone, MessageSquare, Sparkles, Check, Video, MapPin, IndianRupee } from 'lucide-react';
 import { useState } from 'react';
 
 export default function BookDiscussionPage() {
@@ -9,11 +9,12 @@ export default function BookDiscussionPage() {
     name: '',
     email: '',
     phone: '',
-    serviceType: '',
+    outfitType: '',
+    occasion: '',
+    budgetRange: '',
+    consultationType: '',
     preferredDate: '',
     preferredTime: '',
-    occasion: '',
-    budget: '',
     description: '',
     referenceImages: false
   });
@@ -32,11 +33,12 @@ export default function BookDiscussionPage() {
           name: '',
           email: '',
           phone: '',
-          serviceType: '',
+          outfitType: '',
+          occasion: '',
+          budgetRange: '',
+          consultationType: '',
           preferredDate: '',
           preferredTime: '',
-          occasion: '',
-          budget: '',
           description: '',
           referenceImages: false
         });
@@ -62,13 +64,29 @@ export default function BookDiscussionPage() {
     "No obligation - just conversation"
   ];
 
-  const serviceTypes = [
-    { value: 'bridal', label: 'Bridal Couture', duration: '90 mins' },
-    { value: 'children', label: "Children's Collection", duration: '60 mins' },
-    { value: 'custom', label: 'Custom Design', duration: '90 mins' },
-    { value: 'embroidery', label: 'Embroidery & Embellishments', duration: '45 mins' },
-    { value: 'alteration', label: 'Alterations & Restyling', duration: '45 mins' },
-    { value: 'occasion', label: 'Occasion Wear', duration: '60 mins' }
+  const outfitTypes = [
+    { value: 'bridal-lehenga', label: 'Bridal Lehenga', icon: '👰' },
+    { value: 'bridal-saree', label: 'Bridal Saree', icon: '🥻' },
+    { value: 'reception-gown', label: 'Reception Gown', icon: '👗' },
+    { value: 'designer-saree', label: 'Designer Saree', icon: '🌸' },
+    { value: 'children-wear', label: "Children's Wear", icon: '👶' },
+    { value: 'mother-daughter', label: 'Mother-Daughter Combo', icon: '👩‍👧' },
+    { value: 'custom-blouse', label: 'Custom Blouse', icon: '👚' },
+    { value: 'embroidery-work', label: 'Embroidery Work', icon: '✨' }
+  ];
+
+  const occasions = [
+    { value: 'wedding', label: 'Wedding Ceremony', icon: '💍' },
+    { value: 'reception', label: 'Reception', icon: '🥂' },
+    { value: 'engagement', label: 'Engagement', icon: '💐' },
+    { value: 'mehendi', label: 'Mehendi', icon: '🌿' },
+    { value: 'sangeet', label: 'Sangeet', icon: '🎵' },
+    { value: 'naming-ceremony', label: 'Naming Ceremony', icon: '🍼' },
+    { value: 'half-saree', label: 'Half Saree Function', icon: '🌺' },
+    { value: 'birthday', label: 'Birthday Party', icon: '🎂' },
+    { value: 'festival', label: 'Festival', icon: '🪔' },
+    { value: 'party', label: 'Party/Event', icon: '🎉' },
+    { value: 'other', label: 'Other', icon: '🎀' }
   ];
 
   const timeSlots = [
@@ -77,12 +95,31 @@ export default function BookDiscussionPage() {
   ];
 
   const budgetRanges = [
-    'Under ₹50,000',
-    '₹50,000 - ₹1,00,000',
-    '₹1,00,000 - ₹2,00,000',
-    '₹2,00,000 - ₹5,00,000',
-    '₹5,00,000+',
-    'Flexible/To be discussed'
+    { value: 'under-50k', label: 'Under ₹50,000', icon: '💰' },
+    { value: '50k-1l', label: '₹50,000 - ₹1,00,000', icon: '💰💰' },
+    { value: '1l-2l', label: '₹1,00,000 - ₹2,00,000', icon: '💰💰💰' },
+    { value: '2l-5l', label: '₹2,00,000 - ₹5,00,000', icon: '💎' },
+    { value: '5l-plus', label: '₹5,00,000+', icon: '💎💎' },
+    { value: 'flexible', label: 'Flexible/To be discussed', icon: '✨' }
+  ];
+
+  const consultationTypes = [
+    {
+      value: 'in-studio',
+      label: 'In-Studio Visit',
+      icon: MapPin,
+      description: 'Visit our studio to experience fabrics firsthand',
+      duration: '60-90 minutes',
+      recommended: true
+    },
+    {
+      value: 'video-call',
+      label: 'Virtual Consultation',
+      icon: Video,
+      description: 'Connect via video call from anywhere',
+      duration: '45-60 minutes',
+      recommended: false
+    }
   ];
 
   return (
