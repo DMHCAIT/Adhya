@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Heart, Sparkles, Crown, Baby, Flame, PartyPopper, Music, Smile } from 'lucide-react';
 
 export default function ByOccasionPage() {
   const occasions = [
@@ -12,6 +12,7 @@ export default function ByOccasionPage() {
       name: 'Wedding',
       tagline: 'Your Dream Day Deserves Perfection',
       emoji: '👰',
+      icon: Crown,
       description: 'From bridal lehengas to family coordination, we create unforgettable wedding outfits that capture the magic of your special day.',
       collections: ['Bridal Lehengas', 'Bridal Sarees', 'Mother-Daughter Sets', 'Groom\'s Family'],
       priceRange: '₹1,00,000 - ₹5,00,000+',
@@ -25,6 +26,7 @@ export default function ByOccasionPage() {
       name: 'Reception & Engagement',
       tagline: 'Elegant Celebrations',
       emoji: '🥂',
+      icon: Heart,
       description: 'Contemporary gowns, designer lehengas, and elegant sarees perfect for evening receptions and engagement ceremonies.',
       collections: ['Reception Gowns', 'Designer Lehengas', 'Contemporary Sarees'],
       priceRange: '₹60,000 - ₹2,50,000',
@@ -38,6 +40,7 @@ export default function ByOccasionPage() {
       name: 'Half Saree Ceremony',
       tagline: 'Coming of Age Celebration',
       emoji: '🦚',
+      icon: Sparkles,
       description: 'Beautiful half saree sets for this significant milestone, blending tradition with contemporary elegance.',
       collections: ['Traditional Half Sarees', 'Designer Lehengas', 'Custom Designs'],
       priceRange: '₹40,000 - ₹1,50,000',
@@ -51,6 +54,7 @@ export default function ByOccasionPage() {
       name: 'Naming Ceremony',
       tagline: 'Welcoming New Beginnings',
       emoji: '🍼',
+      icon: Baby,
       description: 'Comfortable yet elegant sarees and outfits for new mothers, plus adorable traditional wear for the little one.',
       collections: ['Elegant Sarees', 'Mother-Baby Coordination', 'Traditional Sets'],
       priceRange: '₹25,000 - ₹80,000',
@@ -64,6 +68,7 @@ export default function ByOccasionPage() {
       name: 'Festivals & Celebrations',
       tagline: 'Embrace Tradition',
       emoji: '🪔',
+      icon: Flame,
       description: 'Vibrant sarees, lehengas, and family sets for Diwali, Durga Puja, Navratri, and other festive occasions.',
       collections: ['Festival Sarees', 'Designer Lehengas', 'Family Sets'],
       priceRange: '₹20,000 - ₹1,00,000',
@@ -77,6 +82,7 @@ export default function ByOccasionPage() {
       name: 'Parties & Events',
       tagline: 'Stand Out with Style',
       emoji: '🎉',
+      icon: PartyPopper,
       description: 'Contemporary gowns, Indo-western fusion, and chic sarees for cocktail parties, birthdays, and social events.',
       collections: ['Evening Gowns', 'Indo-Western', 'Designer Sarees'],
       priceRange: '₹30,000 - ₹1,20,000',
@@ -90,6 +96,7 @@ export default function ByOccasionPage() {
       name: 'Mehendi & Sangeet',
       tagline: 'Dance the Night Away',
       emoji: '💃',
+      icon: Music,
       description: 'Lightweight, colorful, and comfortable outfits perfect for dancing and celebrating pre-wedding functions.',
       collections: ['Lehengas', 'Anarkali Sets', 'Fusion Wear'],
       priceRange: '₹35,000 - ₹1,50,000',
@@ -103,6 +110,7 @@ export default function ByOccasionPage() {
       name: 'Children\'s Special Occasions',
       tagline: 'Little Ones, Big Moments',
       emoji: '👶',
+      icon: Smile,
       description: 'Comfortable, adorable traditional wear for kids - lehengas, kurta sets, and custom designs for all celebrations.',
       collections: ['Kids Lehengas', 'Kurta Sets', 'Mother-Daughter Combos'],
       priceRange: '₹8,000 - ₹40,000',
@@ -187,7 +195,10 @@ export default function ByOccasionPage() {
                   
                   {/* Badge */}
                   <div className="absolute top-6 left-6 bg-white/95 backdrop-blur-sm px-4 py-2 shadow-lg">
-                    <div className="text-3xl mb-1">{occasion.emoji}</div>
+                    <div className="flex items-center gap-2 mb-1">
+                      <div className="text-2xl">{occasion.emoji}</div>
+                      <occasion.icon className="w-5 h-5" style={{ color: occasion.color }} />
+                    </div>
                     <div className="text-xs tracking-wider uppercase text-gray-600">{occasion.products} Designs</div>
                   </div>
 
