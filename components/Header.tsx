@@ -16,11 +16,11 @@ export default function Header() {
 
   const navItems = [
     { name: 'Home', path: '/' },
+    { name: 'Wedding Collections', path: '/wedding-collections' },
     { name: 'Shop by Occasion', path: '/by-occasion' },
     { name: 'Collections', path: '/collections' },
     { name: 'Embroidery Services', path: '/embroidery-services' },
     { name: 'Design Journey', path: '/design-journey' },
-    { name: 'Client Stories', path: '/client-stories' },
   ];
 
   return (
