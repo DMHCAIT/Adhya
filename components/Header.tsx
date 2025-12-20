@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, X, ShoppingBag } from 'lucide-react';
@@ -27,8 +28,19 @@ export default function Header() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link href="/" className="text-2xl md:text-3xl font-light tracking-[0.3em] text-[#1C1C1C]" style={{ fontFamily: 'var(--font-cormorant)' }}>
-            ADHYA
+          <Link href="/" className="flex items-center gap-3">
+            <div className="relative w-12 h-12 md:w-14 md:h-14">
+              <Image
+                src="/logo.jpg"
+                alt="ADHYA Studio"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
+            <span className="text-2xl md:text-3xl font-light tracking-[0.3em] text-[#1C1C1C]" style={{ fontFamily: 'var(--font-cormorant)' }}>
+              ADHYA
+            </span>
           </Link>
 
           {/* Desktop Navigation */}

@@ -97,24 +97,6 @@ export default function HomePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            {/* Logo */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1, delay: 0.2 }}
-              className="mb-8"
-            >
-              <div className="relative w-48 h-48 md:w-64 md:h-64 mx-auto">
-                <Image
-                  src="/logo.jpg"
-                  alt="ADHYA Studio Logo"
-                  fill
-                  className="object-contain drop-shadow-2xl"
-                  priority
-                />
-              </div>
-            </motion.div>
-
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-light text-white mb-6" style={{ fontFamily: 'var(--font-cormorant)' }}>
               Premium Designer Wear<br />for Women & Children
             </h1>
