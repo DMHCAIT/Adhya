@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Crown, Sparkles, Heart, Calendar, Gift, Flower2, ChevronRight, Phone } from 'lucide-react';
+import { Crown, Sparkles, Heart, Calendar, Gift, Flower2, ChevronRight, Phone, Check } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 
