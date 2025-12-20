@@ -17,9 +17,8 @@ export default function Header() {
     { name: 'Home', path: '/' },
     { name: 'Shop by Occasion', path: '/by-occasion' },
     { name: 'Collections', path: '/collections' },
+    { name: 'Embroidery Services', path: '/embroidery-services' },
     { name: 'Design Journey', path: '/design-journey' },
-    { name: 'AI Style Assistant', path: '/ai-style-assistant' },
-    { name: 'Moments Gallery', path: '/moments-gallery' },
     { name: 'Client Stories', path: '/client-stories' },
   ];
 
