@@ -186,20 +186,25 @@ const weddingEssentials = [
 
 export default function WeddingCollectionsPage() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-[#FAF9F7] via-white to-[#FFF5E6]">
+    <main className="min-h-screen bg-[#FAF9F7]">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-[#1C1C1C] via-[#2D2D2D] to-[#1C1C1C] text-white py-20 md:py-32 overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-20 w-64 h-64 bg-[#C8A96A] rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-20 w-96 h-96 bg-[#C8A96A] rounded-full blur-3xl"></div>
+      <section className="relative min-h-[75vh] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src="/Designer Lehengas.png"
+            alt="Wedding Collections"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80"></div>
         </div>
         
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center"
           >
             <motion.div
               initial={{ scale: 0 }}
@@ -210,29 +215,39 @@ export default function WeddingCollectionsPage() {
               <Crown className="w-16 h-16 md:w-20 md:h-20 text-[#C8A96A] mx-auto" />
             </motion.div>
             
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-light text-white mb-6" style={{ fontFamily: 'var(--font-cormorant)' }}>
               Wedding Collections
               <span className="block text-[#C8A96A] mt-2">From Start to Forever</span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Everything you need for your perfect wedding journey - from engagement to post-wedding celebrations, all in one place
+            <p className="text-xl md:text-2xl text-white/90 mb-10 max-w-3xl mx-auto">
+              Everything you need for your perfect wedding journey - from engagement to post-wedding celebrations
             </p>
 
-            <div className="flex flex-wrap justify-center gap-4 text-sm md:text-base">
-              <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full">
+            <div className="flex flex-wrap justify-center gap-3 mb-8">
+              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-5 py-2.5 rounded-full border border-white/20">
                 <Sparkles className="w-5 h-5 text-[#C8A96A]" />
-                <span>650+ Designs</span>
+                <span className="text-white">650+ Designs</span>
               </div>
-              <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full">
+              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-5 py-2.5 rounded-full border border-white/20">
                 <Heart className="w-5 h-5 text-[#C8A96A]" />
-                <span>6 Ceremonies</span>
+                <span className="text-white">6 Ceremonies</span>
               </div>
-              <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full">
+              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-5 py-2.5 rounded-full border border-white/20">
                 <Gift className="w-5 h-5 text-[#C8A96A]" />
-                <span>Unique Essentials</span>
+                <span className="text-white">Unique Essentials</span>
               </div>
             </div>
+
+            <a
+              href="https://wa.me/919177171594?text=Hi%2C%20I%27m%20interested%20in%20wedding%20collections"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-[#C8A96A] hover:bg-[#B8995A] text-white px-8 py-4 rounded-full text-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl"
+            >
+              <Phone className="w-5 h-5" />
+              Book Consultation
+            </a>
           </motion.div>
         </div>
       </section>
@@ -246,8 +261,9 @@ export default function WeddingCollectionsPage() {
             viewport={{ once: true }}
             className="text-center mb-12 md:mb-16"
           >
-            <h2 className="text-3xl md:text-5xl font-bold text-[#1C1C1C] mb-4">
-              👰 Bride Collections
+            <div className="inline-block text-5xl md:text-6xl mb-4">👰</div>
+            <h2 className="text-3xl md:text-5xl font-light text-[#1C1C1C] mb-4" style={{ fontFamily: 'var(--font-cormorant)' }}>
+              Bride Collections
             </h2>
             <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
               Curated bridal wear for every moment of your special day
@@ -255,7 +271,6 @@ export default function WeddingCollectionsPage() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            {brideCollections.map((collection, index) => (
               <motion.div
                 key={collection.id}
                 initial={{ opacity: 0, y: 30 }}
@@ -265,45 +280,44 @@ export default function WeddingCollectionsPage() {
                 className="group"
               >
                 <Link href={`/wedding-collections/bride/${collection.id}`}>
-                  <div className="bg-gradient-to-br from-[#FAF9F7] to-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 h-full">
-                    <div className="p-6 md:p-8">
-                      <div className="text-5xl mb-4">{collection.emoji}</div>
+                  <div className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-200 h-full">
+                    <div className="p-6">
+                      <div className="text-4xl mb-3">{collection.emoji}</div>
                       
-                      <h3 className="text-2xl font-bold text-[#1C1C1C] mb-2 group-hover:text-[#C8A96A] transition-colors">
+                      <h3 className="text-xl md:text-2xl font-semibold text-[#1C1C1C] mb-2 group-hover:text-[#C8A96A] transition-colors">
                         {collection.name}
                       </h3>
                       
-                      <p className="text-gray-600 mb-4">
+                      <p className="text-gray-600 mb-4 text-sm">
                         {collection.description}
                       </p>
                       
-                      <div className="bg-[#C8A96A]/10 rounded-lg p-3 mb-4">
-                        <p className="text-[#C8A96A] font-semibold text-lg">
+                      <div className="bg-[#C8A96A]/5 rounded-lg p-3 mb-4 border border-[#C8A96A]/20">
+                        <p className="text-[#C8A96A] font-semibold">
                           {collection.priceRange}
                         </p>
-                        <p className="text-sm text-gray-600 mt-1">
+                        <p className="text-xs text-gray-600 mt-1">
                           {collection.designs}
                         </p>
                       </div>
 
-                      <ul className="space-y-2 mb-6">
+                      <ul className="space-y-2 mb-4">
                         {collection.features.map((feature, idx) => (
-                          <li key={idx} className="flex items-center text-sm text-gray-700">
-                            <Sparkles className="w-4 h-4 text-[#C8A96A] mr-2 flex-shrink-0" />
+                          <li key={idx} className="flex items-start text-sm text-gray-700">
+                            <ChevronRight className="w-4 h-4 text-[#C8A96A] mr-2 flex-shrink-0 mt-0.5" />
                             {feature}
                           </li>
                         ))}
                       </ul>
 
-                      <div className="flex items-center justify-between">
-                        <span className="text-[#C8A96A] font-medium group-hover:underline">
-                          View Collection
-                        </span>
-                        <ChevronRight className="w-5 h-5 text-[#C8A96A] group-hover:translate-x-1 transition-transform" />
+                      <div className="flex items-center text-[#C8A96A] font-medium group-hover:gap-2 transition-all">
+                        <span>View Collection</span>
+                        <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                       </div>
                     </div>
                   </div>
                 </Link>
+              </motion.div>
               </motion.div>
             ))}
           </div>
@@ -312,6 +326,8 @@ export default function WeddingCollectionsPage() {
 
       {/* Section B: Wedding by Ceremony */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-[#FAF9F7] via-white to-[#FFF5E6]">
+      {/* Section B: Wedding by Ceremony */}
+      <section className="py-16 md:py-24 bg-[#FAF9F7]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -319,58 +335,54 @@ export default function WeddingCollectionsPage() {
             viewport={{ once: true }}
             className="text-center mb-12 md:mb-16"
           >
-            <div className="inline-block bg-[#C8A96A]/10 px-6 py-2 rounded-full mb-4">
-              <span className="text-[#C8A96A] font-semibold">VERY IMPORTANT</span>
+            <div className="inline-block bg-[#C8A96A] px-6 py-2 rounded-full mb-6">
+              <span className="text-white font-medium text-sm">MOST IMPORTANT</span>
             </div>
-            <h2 className="text-3xl md:text-5xl font-bold text-[#1C1C1C] mb-4">
-              💐 Wedding by Ceremony
+            <div className="inline-block text-5xl md:text-6xl mb-4">💐</div>
+            <h2 className="text-3xl md:text-5xl font-light text-[#1C1C1C] mb-4" style={{ fontFamily: 'var(--font-cormorant)' }}>
+              Wedding by Ceremony
             </h2>
             <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
               Complete guide for each ceremony - outfits, accessories, and requirements
             </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
-            {ceremonies.map((ceremony, index) => (
+          </motion.div>e="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
               <motion.div
                 key={ceremony.id}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 className="group"
               >
                 <Link href={`/wedding-collections/ceremony/${ceremony.id}`}>
-                  <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 border-transparent hover:border-[#C8A96A] h-full">
-                    <div className="p-6 md:p-8">
-                      <div className="flex items-start justify-between mb-4">
-                        <div className="text-5xl">{ceremony.emoji}</div>
-                        <Calendar className="w-6 h-6 text-[#C8A96A]" />
+                  <div className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-200 hover:border-[#C8A96A] h-full">
+                    <div className="p-6">
+                      <div className="flex items-center justify-between mb-3">
+                        <div className="text-4xl">{ceremony.emoji}</div>
+                        <div className="bg-[#C8A96A]/5 rounded-lg px-3 py-1.5 border border-[#C8A96A]/20">
+                          <p className="text-[#C8A96A] font-semibold text-sm">
+                            {ceremony.priceRange}
+                          </p>
+                        </div>
                       </div>
                       
-                      <h3 className="text-2xl md:text-3xl font-bold text-[#1C1C1C] mb-2 group-hover:text-[#C8A96A] transition-colors">
+                      <h3 className="text-xl md:text-2xl font-semibold text-[#1C1C1C] mb-2 group-hover:text-[#C8A96A] transition-colors">
                         {ceremony.name}
                       </h3>
                       
-                      <p className="text-gray-600 mb-4">
+                      <p className="text-gray-600 mb-4 text-sm">
                         {ceremony.description}
                       </p>
-                      
-                      <div className="bg-[#C8A96A]/10 rounded-lg p-3 mb-6">
-                        <p className="text-[#C8A96A] font-semibold text-lg">
-                          {ceremony.priceRange}
-                        </p>
-                      </div>
 
-                      <div className="space-y-4">
+                      <div className="space-y-3">
                         <div>
-                          <h4 className="font-semibold text-[#1C1C1C] mb-2 flex items-center">
+                          <h4 className="font-medium text-[#1C1C1C] mb-2 text-sm flex items-center">
                             <Sparkles className="w-4 h-4 text-[#C8A96A] mr-2" />
                             Bride Outfits
                           </h4>
-                          <div className="flex flex-wrap gap-2">
+                          <div className="flex flex-wrap gap-1.5">
                             {ceremony.outfits.slice(0, 3).map((outfit, idx) => (
-                              <span key={idx} className="text-xs bg-gray-100 px-3 py-1 rounded-full text-gray-700">
+                              <span key={idx} className="text-xs bg-gray-50 px-2.5 py-1 rounded-md text-gray-700 border border-gray-200">
                                 {outfit}
                               </span>
                             ))}
@@ -378,43 +390,28 @@ export default function WeddingCollectionsPage() {
                         </div>
 
                         <div>
-                          <h4 className="font-semibold text-[#1C1C1C] mb-2 flex items-center">
-                            <Crown className="w-4 h-4 text-[#C8A96A] mr-2" />
+                          <h4 className="font-medium text-[#1C1C1C] mb-2 text-sm flex items-center">
+                            <Calendar className="w-4 h-4 text-[#C8A96A] mr-2" />
                             Required Items
                           </h4>
-                          <div className="flex flex-wrap gap-2">
-                            {ceremony.requiredItems.slice(0, 3).map((item, idx) => (
-                              <span key={idx} className="text-xs bg-gray-100 px-3 py-1 rounded-full text-gray-700">
+                          <div className="flex flex-wrap gap-1.5">
+                            {ceremony.requiredItems.slice(0, 2).map((item, idx) => (
+                              <span key={idx} className="text-xs bg-gray-50 px-2.5 py-1 rounded-md text-gray-700 border border-gray-200">
                                 {item}
                               </span>
                             ))}
                           </div>
                         </div>
-
-                        <div>
-                          <h4 className="font-semibold text-[#1C1C1C] mb-2 flex items-center">
-                            <Heart className="w-4 h-4 text-[#C8A96A] mr-2" />
-                            Accessories
-                          </h4>
-                          <div className="flex flex-wrap gap-2">
-                            {ceremony.accessories.slice(0, 3).map((accessory, idx) => (
-                              <span key={idx} className="text-xs bg-gray-100 px-3 py-1 rounded-full text-gray-700">
-                                {accessory}
-                              </span>
-                            ))}
-                          </div>
-                        </div>
                       </div>
 
-                      <div className="mt-6 pt-6 border-t border-gray-200 flex items-center justify-between">
-                        <span className="text-[#C8A96A] font-medium group-hover:underline">
-                          View Complete Details
-                        </span>
-                        <ChevronRight className="w-5 h-5 text-[#C8A96A] group-hover:translate-x-1 transition-transform" />
+                      <div className="mt-5 pt-4 border-t border-gray-100 flex items-center text-[#C8A96A] font-medium group-hover:gap-2 transition-all">
+                        <span className="text-sm">View Complete Details</span>
+                        <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                       </div>
                     </div>
                   </div>
                 </Link>
+              </motion.div>
               </motion.div>
             ))}
           </div>
@@ -438,74 +435,79 @@ export default function WeddingCollectionsPage() {
             </h2>
             <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
               Everything beyond the outfit - decorations, gifts, and family requirements
+      {/* Section C: Wedding Essentials */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12 md:mb-16"
+          >
+            <div className="inline-block bg-gradient-to-r from-[#C8A96A] to-[#D4B97C] px-6 py-2 rounded-full mb-6">
+              <span className="text-white font-medium text-sm">UNIQUE TO ADHYA</span>
+            </div>
+            <div className="inline-block text-5xl md:text-6xl mb-4">🎁</div>
+            <h2 className="text-3xl md:text-5xl font-light text-[#1C1C1C] mb-4" style={{ fontFamily: 'var(--font-cormorant)' }}>
+              Wedding Essentials
+            </h2>
+            <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+              Everything beyond the outfit - decorations, gifts, and family requirements
             </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            {weddingEssentials.map((essential, index) => (
+          </motion.div>h3 className="text-xl md:text-2xl font-bold text-[#1C1C1C] mb-2 group-hover:text-[#C8A96A] transition-colors">
+                        {essential.name}
+                      </h3>
+                      
               <motion.div
                 key={essential.id}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 className="group"
               >
                 <Link href={`/wedding-collections/essentials/${essential.id}`}>
-                  <div className="bg-gradient-to-br from-[#FAF9F7] to-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 h-full">
-                    <div className="p-6 md:p-8">
-                      <div className="text-5xl mb-4">{essential.emoji}</div>
+                  <div className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-200 h-full">
+                    <div className="p-6">
+                      <div className="text-4xl mb-3">{essential.emoji}</div>
                       
-                      <h3 className="text-xl md:text-2xl font-bold text-[#1C1C1C] mb-2 group-hover:text-[#C8A96A] transition-colors">
+                      <h3 className="text-lg md:text-xl font-semibold text-[#1C1C1C] mb-2 group-hover:text-[#C8A96A] transition-colors">
                         {essential.name}
                       </h3>
                       
-                      <p className="text-gray-600 mb-4">
+                      <p className="text-gray-600 mb-3 text-sm">
                         {essential.description}
                       </p>
                       
-                      <div className="bg-[#C8A96A]/10 rounded-lg p-3 mb-4">
-                        <p className="text-[#C8A96A] font-semibold">
+                      <div className="bg-[#C8A96A]/5 rounded-lg p-2.5 mb-3 border border-[#C8A96A]/20">
+                        <p className="text-[#C8A96A] font-semibold text-sm">
                           {essential.priceRange}
                         </p>
                       </div>
 
-                      <ul className="space-y-2 mb-6">
+                      <ul className="space-y-1.5 mb-4">
                         {essential.items.map((item, idx) => (
-                          <li key={idx} className="flex items-center text-sm text-gray-700">
-                            <Gift className="w-4 h-4 text-[#C8A96A] mr-2 flex-shrink-0" />
+                          <li key={idx} className="flex items-start text-xs text-gray-700">
+                            <ChevronRight className="w-3.5 h-3.5 text-[#C8A96A] mr-1.5 flex-shrink-0 mt-0.5" />
                             {item}
                           </li>
                         ))}
                       </ul>
 
                       {essential.customization && (
-                        <div className="bg-green-50 border border-green-200 rounded-lg p-3 mb-4">
-                          <p className="text-green-700 text-sm font-medium flex items-center">
-                            <Sparkles className="w-4 h-4 mr-2" />
+                        <div className="bg-green-50 border border-green-200 rounded-lg p-2.5 mb-3">
+                          <p className="text-green-700 text-xs font-medium flex items-center">
+                            <Sparkles className="w-3.5 h-3.5 mr-1.5" />
                             Full Customization Available
                           </p>
-                        </div>
-                      )}
-
-                      <div className="flex items-center justify-between">
-                        <span className="text-[#C8A96A] font-medium group-hover:underline">
-                          Explore More
-                        </span>
-                        <ChevronRight className="w-5 h-5 text-[#C8A96A] group-hover:translate-x-1 transition-transform" />
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-r from-[#1C1C1C] via-[#2D2D2D] to-[#1C1C1C] text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="py-20 md:py-32 bg-gradient-to-br from-[#1C1C1C] to-[#2D2D2D] text-white relative overflow-hidden">
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-20 left-20 w-64 h-64 bg-[#C8A96A] rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-20 w-96 h-96 bg-[#C8A96A] rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -513,40 +515,50 @@ export default function WeddingCollectionsPage() {
           >
             <Flower2 className="w-16 h-16 text-[#C8A96A] mx-auto mb-6" />
             
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">
+            <h2 className="text-3xl md:text-5xl font-light mb-6" style={{ fontFamily: 'var(--font-cormorant)' }}>
               Start Your Wedding Journey
             </h2>
             
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-lg md:text-xl text-white/80 mb-10 max-w-2xl mx-auto">
               From marriage starting to marriage ending – everything in one place
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <a
                 href="https://wa.me/919177171594?text=Hi%2C%20I%27m%20interested%20in%20wedding%20collections"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#20BA5A] text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
+                className="inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20BA5A] text-white px-8 py-4 rounded-full font-medium transition-all duration-300 shadow-lg hover:shadow-xl"
               >
-                <Phone className="w-6 h-6" />
+                <Phone className="w-5 h-5" />
                 Book Consultation
               </a>
               
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-3 bg-white hover:bg-gray-100 text-[#1C1C1C] px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
+                className="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-100 text-[#1C1C1C] px-8 py-4 rounded-full font-medium transition-all duration-300 shadow-lg hover:shadow-xl"
               >
-                <Calendar className="w-6 h-6" />
+                <Calendar className="w-5 h-5" />
                 Schedule Visit
               </Link>
             </div>
 
-            <p className="text-gray-400 mt-8">
-              Expert guidance • Custom designs • Complete wedding solutions
-            </p>
+            <div className="flex flex-wrap justify-center gap-6 text-sm text-white/70">
+              <div className="flex items-center gap-2">
+                <Check className="w-4 h-4 text-[#C8A96A]" />
+                <span>Expert Guidance</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Check className="w-4 h-4 text-[#C8A96A]" />
+                <span>Custom Designs</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Check className="w-4 h-4 text-[#C8A96A]" />
+                <span>Complete Solutions</span>
+              </div>
+            </div>
           </motion.div>
         </div>
       </section>
-    </main>
   );
 }
