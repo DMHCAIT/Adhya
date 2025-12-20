@@ -28,14 +28,15 @@ export default function Header() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center">
-            <div className="relative w-32 h-16 md:w-40 md:h-20">
+          <Link href="/" className="flex items-center py-2">
+            <div className="relative h-16 w-auto aspect-[3/1]">
               <Image
                 src="/logo.jpg"
                 alt="ADHYA Studio"
                 fill
                 className="object-contain"
                 priority
+                style={{ objectPosition: 'left center' }}
               />
             </div>
           </Link>
