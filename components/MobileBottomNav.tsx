@@ -25,7 +25,7 @@ export default function MobileBottomNav() {
     },
     {
       name: 'Whatsapp',
-      href: 'https://wa.me/919177171594',
+      href: 'https://wa.me/918220952369',
       icon: MessageCircle,
       external: true,
     },
