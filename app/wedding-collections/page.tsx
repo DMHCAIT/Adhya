@@ -558,5 +558,6 @@ export default function WeddingCollectionsPage() {
           </motion.div>
         </div>
       </section>
+    </main>
   );
 }
