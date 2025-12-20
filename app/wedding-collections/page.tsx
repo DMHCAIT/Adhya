@@ -318,14 +318,11 @@ export default function WeddingCollectionsPage() {
                   </div>
                 </Link>
               </motion.div>
-              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Section B: Wedding by Ceremony */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-[#FAF9F7] via-white to-[#FFF5E6]">
       {/* Section B: Wedding by Ceremony */}
       <section className="py-16 md:py-24 bg-[#FAF9F7]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -345,7 +342,10 @@ export default function WeddingCollectionsPage() {
             <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
               Complete guide for each ceremony - outfits, accessories, and requirements
             </p>
-          </motion.div>e="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
+            {ceremonies.map((ceremony, index) => (
               <motion.div
                 key={ceremony.id}
                 initial={{ opacity: 0, y: 30 }}
