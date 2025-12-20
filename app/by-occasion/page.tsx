@@ -236,13 +236,21 @@ export default function ByOccasionPage() {
                 </div>
 
                 {/* CTA */}
-                <Link
-                  href="/book-discussion"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-[#1C1C1C] text-white hover:bg-[#C8A96A] transition-colors text-sm tracking-wider group"
-                >
-                  DISCUSS YOUR {occasion.name.toUpperCase()}
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </Link>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Link
+                    href={`/by-occasion/${occasion.id}`}
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-[#C8A96A] text-white hover:bg-[#1C1C1C] transition-colors text-sm tracking-wider group"
+                  >
+                    VIEW ALL DESIGNS
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                  <Link
+                    href="/book-discussion"
+                    className="inline-flex items-center gap-2 px-6 py-3 border-2 border-[#1C1C1C] text-[#1C1C1C] hover:bg-[#1C1C1C] hover:text-white transition-colors text-sm tracking-wider"
+                  >
+                    BOOK CONSULTATION
+                  </Link>
+                </div>
               </div>
             </motion.article>
           ))}
