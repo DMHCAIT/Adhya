@@ -14,12 +14,12 @@ export default function WhatsAppButton() {
 
   return (
     <>
-      {/* Floating WhatsApp Button */}
+      {/* Floating WhatsApp Button - Hidden on mobile since it's in bottom nav */}
       <motion.div
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ delay: 1, duration: 0.5, type: 'spring' }}
-        className="fixed bottom-6 right-6 z-50"
+        className="hidden md:block fixed bottom-6 right-6 z-50"
         onMouseEnter={() => setShowTooltip(true)}
         onMouseLeave={() => setShowTooltip(false)}
       >
